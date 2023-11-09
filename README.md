@@ -1,6 +1,6 @@
 # Liv2Eat-Digitalization of Canteen
 
-Liv2Eat is a digital solution designed to modernize the canteen experience by streamlining the process of menu display, food ordering, and payment. This system not only enhances operational efficiency but also improves customer satisfaction by reducing wait times. This solution consists of a Mobile App to order food and an adminw web application to view orders.
+Liv2Eat is a digital solution designed to modernize the canteen experience by streamlining the process of menu display, food ordering, and payment. This system not only enhances operational efficiency but also improves customer satisfaction by reducing wait times. This solution consists of a Mobile App to order food and an admin web application to view orders.
 
 ## Features
 
@@ -20,13 +20,13 @@ Liv2Eat is a digital solution designed to modernize the canteen experience by st
 ## Screenshots
 
 ### Login & Home
-<img src="screens/Login_and_home.png" width="400">
+<img src="screens/Login_and_home.png" width="600">
 
 ### Order Flow
-<img src="screens/Order_flow.png" width="400">
+<img src="screens/Order_flow.png" width="600">
 
 ### Admin Web App Screen
-<img src="screens/Admin_Web_App_Screen.png" width="400">
+<img src="screens/Admin_Web_App_Screen.png" width="600">
 
 ## Team Members
 - Tanmay Dhaundiyal
