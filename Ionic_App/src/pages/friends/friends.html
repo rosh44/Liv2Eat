@@ -1,0 +1,251 @@
+<!--
+  Generated template for the FriendsPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-navbar color="dark">
+    <ion-title>
+      <h1 style="color: #fff; margin-bottom: 20px;
+      font-size: 30px;
+      
+      margin-top:20px;
+      text-align: center;
+ font-family: 'Pacifico' , cursive;">Friends</h1>
+ 
+    </ion-title>
+    
+  </ion-navbar> 
+
+  <div padding>
+    <ion-segment [(ngModel)]="menu">
+      <ion-segment-button value="category" style="font-family: Lato">
+        Requests
+      </ion-segment-button>
+      <ion-segment-button value="full" style="font-family: Lato">
+        Friends
+      </ion-segment-button>
+    </ion-segment>
+  </div>
+</ion-header>
+
+
+<ion-content class="card-background-page">
+  <div class="container2">
+  <div [ngSwitch]="menu" >
+    <ion-list *ngSwitchCase="'category'">
+    
+
+
+      <!-- PENDING REQUESTS -->
+      <div class="table1">
+        <div class="table-header1" >
+            <div class="header__item1" >
+              
+              <h2 #menuList>PENDING REQUESTS </h2>
+              
+            </div>
+            
+         <!--	<div class="header__item">Item</div>
+          <div class="header__item">Quantity</div>
+          <div class="header__item">Status</div> -->
+        </div>
+        <p class="display" style="text-align:left"  [class.display]="pendingLength!=0">Sorry you have no requests yet.</p>
+        <div class="table-content1" *ngFor="let y of pendingFriends">
+          <div class="table-row1">	
+              
+              <div class="table-data1 menuImg">
+                <ion-chip>
+                <ion-avatar>
+                <img src="http://www.personalbrandingblog.com/wp-content/uploads/2017/08/blank-profile-picture-973460_640.png" > 
+                <!-- <img src="https://firebasestorage.googleapis.com/v0/b/canteen-b59c6.appspot.com/o/Category_images%2F{{item.image}}?alt=media&token=edcbbc30-5ecd-4170-8642-220fa4329a8a"> -->
+               </ion-avatar>
+              </ion-chip></div>
+            <div class="table-data1 content menuDet" >
+                <h3>{{y.name}} {{y.last}}</h3>
+                <div style="width: 100%; float: left;"> 
+                Email: {{y.email}} 
+                </div>
+                <br>
+                {{setUname(uname,id)}}
+              
+                <!--  <ion-icon name="person-add" (click)="addFriend(id,y.id,'roshni.as@somaiya.edu',y.email)"></ion-icon>-->
+                <button ion-button (click)="acceptRequest(y.name,id,y.id,uname,y.email)" >Accept</button><button ion-button color="light" (click)="rejectRequest(y.name,id,y.id,uname,y.email)">Reject</button>
+    
+            </div>
+            <div class="table-data1 menuAdd">
+              <!-- {{setUname(uname,id)}}
+              
+              <!--  <ion-icon name="person-add" (click)="addFriend(id,y.id,'roshni.as@somaiya.edu',y.email)"></ion-icon>-->
+             <!-- <button ion-button (click)="acceptRequest(y.name,id,y.id,uname,y.email)" >Accept</button><button ion-button color="light" (click)="rejectRequest(y.name,id,y.id,uname,y.email)">Reject</button>
+            -->
+            </div>
+         
+        
+          
+        </div>	
+      </div>
+    </div>
+
+
+
+
+      <!-- other users-->
+  
+<div class="table1">
+  <div class="table-header1" >
+      <div class="header__item1" >
+        
+        <h2 #menuList>PEOPLE YOU MAY KNOW</h2>
+      </div>
+   <!--	<div class="header__item">Item</div>
+    <div class="header__item">Quantity</div>
+    <div class="header__item">Status</div> -->
+  </div>
+  <div class="table-content1" *ngFor="let y of items2">
+    <div class="table-row1">	
+        
+        <div class="table-data1 menuImg">
+          <ion-chip>
+          <ion-avatar>
+          <img src="http://www.personalbrandingblog.com/wp-content/uploads/2017/08/blank-profile-picture-973460_640.png" > 
+          <!-- <img src="https://firebasestorage.googleapis.com/v0/b/canteen-b59c6.appspot.com/o/Category_images%2F{{item.image}}?alt=media&token=edcbbc30-5ecd-4170-8642-220fa4329a8a"> -->
+         </ion-avatar>
+        </ion-chip></div>
+      <div class="table-data1 content menuDet" >
+          <h3>{{y.name}} {{y.last}} </h3>
+          <div style="width: 100%; float: left;"> 
+          Email: {{y.email}} 
+          </div>
+         
+
+      </div>
+      <div class="table-data1 menuAdd">
+       
+        {{setUname(uname,id)}}
+                
+                <ion-icon name="person-add" (click)="addFriend(id,y.id,uname,y.email)" class="person-icon"></ion-icon>
+                <ion-icon name="add-circle-outline"></ion-icon>
+      
+      </div>
+   
+  
+    
+  </div>	
+</div>
+</div>
+
+
+  </ion-list>
+  </div>
+
+  <div [ngSwitch] = "menu"> 
+    <ion-list *ngSwitchCase="'full'">
+         <!--Friends  -->
+
+
+  <div class="table1">
+    <div class="table-header1" >
+        <div class="header__item1" >
+          
+          <h2 #menuList>FRIENDS</h2>
+        </div>
+     <!--	<div class="header__item">Item</div>
+      <div class="header__item">Quantity</div>
+      <div class="header__item">Status</div> -->
+    </div>
+    <p style="text-align:left" class="display" [class.display]="friendLength!=0">Seems like you have no friends right now. Click the Requests Tab and send friend requests to people you know.</p>
+    <div class="table-content1" *ngFor="let y of friends">
+      <div class="table-row1">	
+          
+          <div class="table-data1 menuImg">
+            <ion-chip>
+            <ion-avatar>
+            <img src="http://www.personalbrandingblog.com/wp-content/uploads/2017/08/blank-profile-picture-973460_640.png" > 
+            <!-- <img src="https://firebasestorage.googleapis.com/v0/b/canteen-b59c6.appspot.com/o/Category_images%2F{{item.image}}?alt=media&token=edcbbc30-5ecd-4170-8642-220fa4329a8a"> -->
+           </ion-avatar>
+          </ion-chip></div>
+        <div class="table-data1 content menuDet" >
+            <h3>{{y.name}} {{y.last}}</h3>
+            <div style="width: 100%; float: left;"> 
+            Email: {{y.email}} 
+            </div>
+           
+
+        </div>
+        <div class="table-data1 menuAdd">
+         
+          {{setUname(uname,id)}}
+              
+            <!--  <ion-icon name="person-add" (click)="addFriend(id,y.id,'roshni.as@somaiya.edu',y.email)"></ion-icon>-->
+            <ion-icon name="checkmark-circle" class="custom-icon"></ion-icon>
+        
+        </div>
+     
+    
+      
+    </div>	
+  </div>
+</div>
+
+
+
+
+
+
+  <!--sent-->
+ 
+<div class="table1">
+  <div class="table-header1" >
+      <div class="header__item1" >
+        
+        <h2 #menuList>REQUESTS SENT</h2>
+      </div>
+   <!--	<div class="header__item">Item</div>
+    <div class="header__item">Quantity</div>
+    <div class="header__item">Status</div> -->
+  </div>
+  <div class="table-content1" *ngFor="let y of sentFriends">
+    <div class="table-row1">	
+        
+        <div class="table-data1 menuImg">
+          <ion-chip>
+          <ion-avatar>
+          <img src="http://www.personalbrandingblog.com/wp-content/uploads/2017/08/blank-profile-picture-973460_640.png" > 
+          <!-- <img src="https://firebasestorage.googleapis.com/v0/b/canteen-b59c6.appspot.com/o/Category_images%2F{{item.image}}?alt=media&token=edcbbc30-5ecd-4170-8642-220fa4329a8a"> -->
+         </ion-avatar>
+        </ion-chip></div>
+      <div class="table-data1 content menuDet" >
+          <h3>{{y.name}} {{y.last}} </h3>
+          <div style="width: 100%; float: left;"> 
+          Email: {{y.email}} 
+          </div>
+         
+
+      </div>
+      <div class="table-data1 menuAdd">
+       
+        {{setUname(uname,id)}}
+                
+    
+       <div class="tabel-data1 content menuDet">Request <br> Sent </div>
+      
+      </div>
+   
+  
+    
+  </div>	
+</div>
+</div>
+    </ion-list>
+  </div>
+
+ 
+
+
+
+    </div>
+
+</ion-content>

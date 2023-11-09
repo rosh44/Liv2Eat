@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<title>
+    Kitchen
+</title>
+<head>
+
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link href="https://fonts.googleapis.com/css?family=Lato|Pacifico|Raleway" rel="stylesheet">
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.1/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+<link href="try.css" rel="stylesheet">
+
+<script type="text/javascript" src="https://gc.kis.v2.scr.kaspersky-labs.com/C01706A8-FFE2-AF4A-9138-0964E4E61C35/main.js" charset="UTF-8"></script><script src="https://www.gstatic.com/firebasejs/5.7.2/firebase.js"></script>
+        <script>
+          // Initialize Firebase
+          var config = {
+            apiKey: "AIzaSyDAAPiZM3ar79SWsmd2lXU0Y14po5t3Ho8",
+            authDomain: "canteen-b59c6.firebaseapp.com",
+            databaseURL: "https://canteen-b59c6.firebaseio.com",
+            projectId: "canteen-b59c6",
+            storageBucket: "canteen-b59c6.appspot.com",
+            messagingSenderId: "210011172914"
+          };
+          firebase.initializeApp(config);
+          
+          </script>
+
+
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut" crossorigin="anonymous"></script>
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k" crossorigin="anonymous"></script>
+</head>
+<body>
+
+    <!-- Navbar -->
+        <nav class="navbar navbar-expand-sm bg-dark fixed-top">
+            <div class="container">
+                    <a id="liv" class="navbar-brand " href="try.html">Liv2Eat</a>
+                    <button class="navbar-toggler navbar-dark" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                      <span class="navbar-toggler-icon"></span>
+                    </button>
+                  
+                      <ul class="navbar-nav px-5">
+                        <li class="nav-item mx-3">
+                            <a class="nav-link active" href="#">KITCHEN<span class="sr-only">(current)</span></a>
+                          </li>
+                                  
+                      </ul>
+                    </div>
+            </div>
+              </nav>
+ <!-- CONTENT BUTTONS -->
+
+              <div class="container-fluid mt-5 pt-5">
+                <div class="row">
+                  <div class="col lg-4 md-6 sm-12">
+                    <button class="btn1 third">
+                        <img src="https://cdn1.iconfinder.com/data/icons/food-flat-2/48/97-512.png" style="border-radius: 50%; height:50px; width: 50px; float: left;">
+                      <div class="txt">SANDWICH</div></button>
+                  </div>
+                  <div class="col lg-4 md-6 sm-12">
+                    <button class="btn1 third south" onclick="getOrders('Dosa')">
+                      
+                     <img src="https://cdn0.iconfinder.com/data/icons/south-indian-meals/150/Dosa_Banana-512.png" style="border-radius: 50%; height:50px; width: 50px; float: left;"> 
+                      <div class="txt">DOSA</div></button>
+                  </div>
+                  <div class="col lg-4 md-6 sm-12">
+                    <button class="btn1 third" onclick="getOrders('Chinese')">
+                        <img src="https://cdn2.iconfinder.com/data/icons/food-and-dessert/128/Food_Icon_2-01-512.png" style="border-radius: 50%; height:50px; width: 50px; float: left;"> 
+                     <div class="txt">CHINESE</div> 
+
+                    </button>
+                  </div>
+                
+                  <div class="col lg-4  md-6 sm-12">
+                    <button class="btn1 third">
+                        <img src="https://png.pngtree.com/svg/20170815/bc8203e49f.svg" style="border-radius: 50%; height:50px; width: 50px; float: left;">
+                      <div class="txt">FRANKIE</div></button>
+                  </div>
+                  <div class="col lg-4 md-6 sm-12">
+                    <button class="btn1 third">
+                        <img src="http://pluspng.com/img-png/free-png-juice-orange-juice-icon-png-50-px-1600.png" style="border-radius: 50%; height:50px; width: 50px; float: left;">
+                        <span class="txt"> 
+                         Juice </span></button>
+                  </div>
+                  <div class="col lg-4 md-6 sm-12">
+                    <button class="btn1 third">
+                        <img src="https://cdn4.iconfinder.com/data/icons/food-and-drink-1-2/64/pizza-food-italian-meal-512.png" style="border-radius: 50%; height:50px; width: 50px; float: left;">
+                      <div class="txt">ITALIAN</div></button>
+                  </div>
+                 
+              </div>
+
+
+
+     <!-- CONTENT ORIGINAL MENU -->
+     <!--
+     <div class="container-fluid mt-5 pt-4">
+        <div class="row justify-content-center">
+            <div class="col-8 text-center">
+                <h1 class="display-4">Food Counter</h1>
+            </div>
+        </div>
+    </div>
+<div class="container text-center mt-3">
+    <div class="btn-group" role="group" aria-label="Basic example">
+        <a class="btn btn-secondary mr-3" id="prev" onclick="setColor('prev', '#101010')">COMPLETED ORDERS</a>
+        <a class="btn btn-secondary" id="new">NEW ORDERS</a>
+        
+      </div>
+
+<!-- NEW ORDERS -->
+<!--
+<div id="newOrders">
+      <table class="table mt-3 t1 justify-content-center" >
+        <thead class="thead-dark">
+         <tr>
+          <th scope="col">ID</th>
+          <th scope="col">ORDER</th>
+          <th scope="col">STATUS</th>
+          <th scope="col">ACTION</th>
+          </tr>
+          </thead>
+          <tbody id="table_body" class="table-hover">
+          </tbody>
+        
+        
+        
+       <script src="getAllOrders.js"></script>
+        
+        </table>
+    </div>
+
+        <!--PREVIOUS ORDERS -->
+        <!--
+        <div id="prevOrders">
+      <table class="table mt-3 t1 justify-content-center prevOrders" >
+        <thead class="thead-dark">
+         <tr>
+          <th scope="col">ID</th>
+          <th scope="col">ORDER</th>
+          <th scope="col">STATUS</th>
+          
+          </tr>
+          </thead>
+          <tbody id="table_body1" class="table-hover">
+          </tbody>
+        
+        
+        
+       <script src="kitchenView.js"></script>
+        
+        </table> 
+
+
+        
+
+
+
+
+
+    </div> -->
+
+
+
+
+</div>  
+<!--CARDS FOR ORDERS -->
+<div class="container-fluid">
+   
+     <div class="newO" id="newOr">
+     
+       <div class="row">
+         <div class="col text-center">
+            <h1 class="newOr">NEW ORDERS </h1>
+         </div>
+         <div class="col text-center">
+            <a class="oldOR" href="#oldOr"><h1>OLD ORDERS </h1></a>
+     
+         </div>
+       </div>
+        
+  
+      
+        
+    
+      
+       
+       <div class="table_body1">
+         
+		<div class="row" id="row1">	</div>
+      </div>
+     </div>
+     <div class="oldO" id="oldOr">
+        
+       <div class="row">
+          <div class="col text-center">
+             <h1 class="newOr">OLD ORDERS </h1>
+          </div>
+          <div class="col text-center">
+             <a class="oldOR" href="#newOr"><h1>NEW ORDERS </h1></a>
+      
+          </div>
+        </div>
+        <div class="table_body2">
+           <div class="row" id="row2" class="all2"></div>
+       </div>
+	   
+       <script src="getAllOrders3.js" id="scriptsrc"></script>
+	   <script>
+	   function changeSRC()
+	   {
+			
+			var edit_save = document.getElementById("scriptsrc");
+			
+			
+			edit_save.src="getKitchenOrders.js";
+			
+			
+	   }
+	   
+	   </script>
+     </div>
+
+    
+        
+      
+     
+   
+    
+    
+     
+     <!--    <div class="col-3">
+            <div class="card text-center">
+                <div class="card-header bg-success">
+                  Order ID: 123
+                </div>
+                <div class="card-body">
+                  
+                  <p class="card-text">Idli Sambhar</p>
+                  <a href="#" class="btn btn-primary">COLLECTED</a>
+                </div>
+                <div class="card-footer text-muted">
+                  12:36 pm
+                </div>
+              </div>
+        </div>
+        <div class="col-3">
+            <div class="card text-center">
+                <div class="card-header bg-danger">
+                  Order ID: 123
+                </div>
+                <div class="card-body">
+                  
+                  <p class="card-text">IDLI SAMBHAR.</p>
+                  <a href="#" class="btn btn-primary">READY</a>
+                </div>
+                <div class="card-footer text-muted">
+                  12:36 pm
+                </div>
+              </div>
+        </div>
+        <div class="col-3">
+            <div class="card text-center">
+                <div class="card-header">
+                  Order ID: 123
+                </div>
+                <div class="card-body">
+                  
+                  <p class="card-text">IDLI SAMBHAR.</p>
+                  <a href="#" class="btn btn-primary">READY</a>
+                </div>
+                <div class="card-footer text-muted">
+                  12:36 pm
+                </div>
+              </div>
+        </div>
+        <div class="col-3">
+            <div class="card text-center">
+                <div class="card-header">
+                  OrderID: 123
+                </div>
+                <div class="card-body">
+                  
+                  <p class="card-text">IDLI SAMBHAR.</p>
+                  <a href="#" class="btn btn-primary">READY</a>
+                </div>
+                <div class="card-footer text-muted">
+                  12:36 pm
+                </div>
+              </div>
+        </div>
+
+        <div id="table_body">
+
+        </div> -->
+
+
+
+
+    
+</div>
+
+
+
+<!-- ATTEMPT AT CARDS -->
+
+
+
+
+<script>
+
+var count = 1;
+    function setColor(btn, color) {
+        var property = document.getElementById(btn);
+        if (count == 0) {
+            property.style.backgroundColor = "#42464b"
+            count = 1;        
+        }
+        else {
+            property.style.backgroundColor = "#FF3333"
+            count = 0;
+        }
+    }
+
+
+
+
+    $(function(){
+        $("#prevOrders").hide();
+        
+        
+        $("#prev").on("click", function(){
+            $("#newOrders").hide();
+            $("#prevOrders").show();
+            
+        });
+    
+        $("#new").on("click", function(){
+            $("#prevOrders").hide();
+            $("#newOrders").show();
+            
+        });
+        
+    });
+    
+    </script>
+     

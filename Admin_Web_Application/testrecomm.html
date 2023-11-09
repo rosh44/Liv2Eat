@@ -1,0 +1,65 @@
+<script type="text/javascript" src="https://gc.kis.v2.scr.kaspersky-labs.com/C01706A8-FFE2-AF4A-9138-0964E4E61C35/main.js" charset="UTF-8"></script><script src="https://www.gstatic.com/firebasejs/5.9.3/firebase.js"></script>
+<script>
+// Initialize Firebase
+  var config = {
+    apiKey: "AIzaSyDAAPiZM3ar79SWsmd2lXU0Y14po5t3Ho8",
+    authDomain: "canteen-b59c6.firebaseapp.com",
+    databaseURL: "https://canteen-b59c6.firebaseio.com",
+    projectId: "canteen-b59c6",
+    storageBucket: "canteen-b59c6.appspot.com",
+    messagingSenderId: "210011172914"
+  };
+
+firebase.initializeApp(config);
+
+function mfs()
+{
+var rootRef= firebase.database().ref().child("Menu");
+console.log(rootRef);
+rootRef.on("child_added",snap => {
+	var category=snap.key;
+	rootRef.child(snap.key).orderByChild('OrderCount').limitToLast(2).on("child_added",snap => {
+        var price =snap.child("Price").val();
+        console.log(snap.key);
+    });
+});
+}
+
+function hr()
+{
+var rootRef= firebase.database().ref().child("Menu");
+console.log(rootRef);
+rootRef.on("child_added",snap => {
+	var category=snap.key;
+	rootRef.child(snap.key).orderByChild('Rating').limitToLast(2).on("child_added",snap => {
+        var price =snap.child("Price").val();
+        console.log(snap.key);
+    });
+});
+}
+
+function wr()
+{
+var rootRef= firebase.database().ref().child("Menu");
+console.log(rootRef);
+rootRef.on("child_added",snap => {
+	var category=snap.key;
+	rootRef.child(snap.key).orderByChild('Rating').limitToFirst(2).on("child_added",snap => {
+        var price =snap.child("Price").val();
+        console.log(snap.key);
+    });
+});
+}
+</script>
+
+<html>
+    <style>
+    </style>
+    <body>
+      <button onclick="mfs()">Most Frequently Sold</button>
+      <br> <br>
+      <button onclick="hr()">Highest Rated</button>
+      <br><br>
+      <button onclick="wr()">Worst Rated</button>
+    </body>
+</html>

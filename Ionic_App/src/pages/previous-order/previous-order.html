@@ -1,0 +1,53 @@
+
+
+<ion-header>
+ 
+    <ion-navbar color="dark">
+      <ion-title>
+        <h1 style="color: #fff; margin-bottom: 20px;
+        font-size: 30px;
+        
+        margin-top:20px;
+        text-align: center;
+   font-family: 'Pacifico' , cursive;">Previous Orders </h1>
+  
+      </ion-title>
+      
+    </ion-navbar> 
+   </ion-header>
+  
+  <ion-content class="card-background-page" >
+  
+ 
+  
+  <div *ngIf="myOrders1.length>0 ; else other_content">
+    
+  <p>Here is your order status. You can go to the counter and collect your order when the status changes to "Collected"</p> 
+  <div class="container1">
+  
+    <div class="table">
+      <div class="table-header">
+          <div class="header__item">Order ID</div>
+        <div class="header__item">Item</div>
+        <div class="header__item">Quantity</div>
+             </div>
+      <div class="table-content" *ngFor="let x of myOrders1">
+        <div class="table-row"  *ngFor="let y of x.order.split(','); let i=index">	
+            {{splitQuan(x.quantity)}}	
+            <div class="table-data">{{x.id}}</div>
+          <div class="table-data">{{y}}</div>
+          <div class="table-data">{{itemQuantity[i]}}</div>
+          
+      
+        </div>
+        
+      </div>	
+    </div>
+  </div>
+  </div>
+  <ng-template #other_content>
+  <p>No Orders</p>
+  </ng-template>
+  </ion-content>
+  <!--</ion-content>-->
+  

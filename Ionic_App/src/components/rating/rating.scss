@@ -1,0 +1,54 @@
+.rating
+{
+    background: black;
+    
+    padding: 3%;
+    padding-right: 0px;
+    border-radius: 10px;
+    margin: 0 auto;
+    width: 80%;
+    position: fixed;
+top: 50%;
+left: 50%;
+transform: translate(-50%, -50%);
+
+}
+.header
+{
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    
+    
+}
+#heading{
+    background: white;
+    font-size: 20px;
+}
+
+button{
+    width: 90px;
+    height: 30px;
+    font-size: 20px;
+}
+
+#star
+{
+    padding: 10px;
+    font-size: 3.0rem;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+}
+.stars
+{
+    align-content: center;
+    margin-left: auto;
+    margin-right: auto;
+    
+    
+}
+.cont
+{
+    color: grey;
+}

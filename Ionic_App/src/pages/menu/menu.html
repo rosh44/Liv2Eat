@@ -1,0 +1,380 @@
+<ion-header>
+ 
+  <ion-navbar color="dark">
+    <ion-title>
+      <h1 style="color: #fff; margin-bottom: 20px;
+      font-size: 30px;
+      
+      margin-top:20px;
+      text-align: center;
+ font-family: 'Pacifico' , cursive;">Menu</h1>
+ <ion-fab  fab-size = "10px" right bottom > 
+  <button ion-fab color="light" (click)="sendData(id,uname)"><ion-icon name="cart"></ion-icon></button>
+  <div *ngIf="cartCount>0">
+      <ion-badge color="danger" style="position:absolute; font-weight:bold; top: 1px; left:5px; font-size:12px">{{cartCount}}
+        </ion-badge>
+      </div>
+</ion-fab> 
+    </ion-title>
+    
+  </ion-navbar> 
+  
+  <ion-searchbar (ionInput)="getItems($event)" #searchbar></ion-searchbar>
+  
+  <div padding>
+    <ion-segment [(ngModel)]="menu">
+      <ion-segment-button value="category" (click)="scrollToTop()" style="font-family: Lato">
+        By Category
+      </ion-segment-button>
+      <ion-segment-button value="full" style="font-family: Lato">
+        Full Menu
+      </ion-segment-button>
+    </ion-segment>
+  </div>
+</ion-header>
+
+
+
+
+<ion-content class="card-background-page">
+     
+
+  <div [ngSwitch]="menu" >
+    <ion-list *ngSwitchCase="'category'">
+	<!--<ion-list  *ngFor="let item of menuCategory | async">
+
+<ion-card>
+    <img src="https://static01.nyt.com/images/2015/01/28/dining/28KITCHEN1/28KITCHEN1-articleLarge.jpg" style = "max-width: 100%; object-fit: cover; height: 175px; transform: scaleX(-1)"/>
+    <div class="card-title">{{item.$key}}</div>	
+    <div class="card-subtitle">{{item.Count}}</div>
+  </ion-card>
+
+</ion-list>-->
+<ion-grid>
+    <ion-row>
+      <ion-col>
+        <ion-card (click)="scrollToBottom('Hot Beverages')">
+          <!-- <img src="https://1.bp.blogspot.com/-xCNmq7e0v5U/V2EoK3UiHjI/AAAAAAAALKc/SdotXpMT4eMFFys1z88q2t-o4q7w0rBeQCLcB/s1600/hot-drink.jpg" style = "max-width: 100%; object-fit: cover; height: 175px; box-shadow: 0 0 900px rgba(0,0,0,0.9) inset;"/> -->
+            <img src="../../assets/imgs/menu/hb.jpg" style = "max-width: 100%; object-fit: cover; height: 175px; box-shadow: 0 0 900px rgba(0,0,0,0.9) inset;"/>
+          <div class="card-title">Hot Beverages</div>
+          <div class="card-subtitle">5 Items</div>
+        </ion-card>
+      </ion-col>
+      <ion-col>
+        <ion-card (click)="scrollToBottom('Snacks')">
+          <!-- <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSO8aDwd6x-j3pATPZxJVu3sfL2SGszo2MOrDc2tJMo4Kj8QGVobw" style = "max-width: 100%; object-fit: cover; height: 175px;"/> -->
+          <img src="../../assets/imgs/menu/snacks.jpg" style = "max-width: 100%; object-fit: cover; height: 175px; box-shadow: 0 0 900px rgba(0,0,0,0.9) inset;"/>
+          <div class="card-title">Snacks</div>
+          <div class="card-subtitle">23 Items</div>
+        </ion-card>
+      </ion-col>
+     
+    </ion-row>
+    <ion-row>
+      <ion-col>
+        <ion-card (click)="scrollToBottom('Fast Items')">
+          <!-- <img src="https://i.ytimg.com/vi/AdxYGRZjbw4/maxresdefault.jpg" style = "max-width: 100%; object-fit: cover; height: 175px; transform: scaleX(-1)"/> -->
+          <img src="../../assets/imgs/menu/fast.jpg" style = "max-width: 100%; object-fit: cover; height: 175px; box-shadow: 0 0 900px rgba(0,0,0,0.9) inset;"/>
+          <div class="card-title">Fast Items</div>
+          <div class="card-subtitle">4 Items</div>
+        </ion-card>
+      </ion-col>
+      <ion-col>
+        <ion-card (click)="scrollToBottom('Dosa Items')"> 
+          <!-- <img src="https://static01.nyt.com/images/2015/01/28/dining/28KITCHEN1/28KITCHEN1-articleLarge.jpg" style = "max-width: 100%; object-fit: cover; height: 175px;"/> -->
+          <img src="../../assets/imgs/menu/dosa.jpg" style = "max-width: 100%; object-fit: cover; height: 175px; box-shadow: 0 0 900px rgba(0,0,0,0.9) inset;"/>
+          <div class="card-title">Dosas</div>
+          <div class="card-subtitle">12 Items</div>
+        </ion-card>
+      </ion-col>
+     
+    </ion-row>
+    <ion-row>
+      <ion-col>
+        <ion-card>
+          <!-- <img src="https://media.istockphoto.com/photos/south-indian-dish-uthappams-picture-id474271863?k=6&m=474271863&s=612x612&w=0&h=QKlMmDp6E8NAfmBRAygFMr6_dDkUTr5KP0bSF9T2BH4=" style = "max-width: 100%; object-fit: cover; height: 175px;"/> -->
+          <img src="../../assets/imgs/menu/istockphoto-474271863-612x612.jpg" style = "max-width: 100%; object-fit: cover; height: 175px; box-shadow: 0 0 900px rgba(0,0,0,0.9) inset;"/>
+          <div class="card-title">Uthappa</div>
+          <div class="card-subtitle">10 Items</div>
+        </ion-card>
+      </ion-col>
+      <ion-col>
+        <ion-card>
+          <!-- <img src="https://www.vegrecipesofindia.com/wp-content/uploads/2014/01/veg-grilled-sandwich.jpg" style = "max-width: 100%; object-fit: cover; height: 175px;"/> -->
+          <img src="../../assets/imgs/menu/sandwich.jpg" style = "max-width: 100%; object-fit: cover; height: 175px; box-shadow: 0 0 900px rgba(0,0,0,0.9) inset;"/>
+          <div class="card-title">Sandwiches</div>
+          <div class="card-subtitle">19 Items</div>
+        </ion-card>
+      </ion-col>
+     
+    </ion-row>
+    <ion-row>
+      <ion-col>
+        <ion-card>
+          <!-- <img src="https://i.pinimg.com/236x/5c/31/1b/5c311bbe46ecb69ea8110442223d9785--bombay-starter-recipes.jpg" style = "max-width: 100%; object-fit: cover; height: 175px;"/> -->
+          <img src="../../assets/imgs/menu/chaat.jpg" style = "max-width: 100%; object-fit: cover; height: 175px; box-shadow: 0 0 900px rgba(0,0,0,0.9) inset;"/>
+          <div class="card-title">Chaat</div>
+          <div class="card-subtitle">6 Items</div>
+        </ion-card>
+      </ion-col>
+      <ion-col>
+        <ion-card (click)="scrollToBottom('Chinese')">
+          <!-- <img src="https://www.foodmama.run/wp-content/uploads/276441-chinese-food.jpg" style = "max-width: 100%; object-fit: cover; height: 175px;"/> -->
+          <img src="../../assets/imgs/menu/chinese.jpg" style = "max-width: 100%; object-fit: cover; height: 175px; box-shadow: 0 0 900px rgba(0,0,0,0.9) inset;"/>
+          <div class="card-title">Chinese</div>
+          <div class="card-subtitle">14 Items</div>
+        </ion-card>
+      </ion-col>
+     
+    </ion-row>
+    <ion-row>
+      <ion-col>
+        <ion-card>
+          <!-- <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTHfEYgTqhG8Exxs8BIcPts1E681iAqmgGpKCB0MskN41Z-fb9hoQ" style = "max-width: 100%; object-fit: cover; height: 175px;"/> -->
+          <img src="../../assets/imgs/menu/rice.jpg" style = "max-width: 100%; object-fit: cover; height: 175px; box-shadow: 0 0 900px rgba(0,0,0,0.9) inset;"/>
+          <div class="card-title">Rice</div>
+          <div class="card-subtitle">11 Items</div>
+        </ion-card>
+      </ion-col>
+      <ion-col>
+        <ion-card>
+          <!-- <img src="http://1.bp.blogspot.com/-aE_44klQgmw/Vl2gH9sDoUI/AAAAAAAAA-A/gfEpF9oNKoU/s1600/24.jpg" style = "max-width: 100%; object-fit: cover; height: 175px; transform: scaleX(-1)"/> -->
+          <img src="../../assets/imgs/menu/gravy.jpg" style = "max-width: 100%; object-fit: cover; height: 175px; box-shadow: 0 0 900px rgba(0,0,0,0.9) inset;"/>
+          <div class="card-title">Gravy Items</div>
+          <div class="card-subtitle">6 Items</div>
+        </ion-card>
+      </ion-col>
+     
+    </ion-row>
+    <ion-row>
+      <ion-col>
+        <ion-card>
+          <!-- <img src="https://tastet.ca/wp-content/uploads/2017/11/pushap-indien-montreal-restaurant-3-1024x681.png" style = "max-width: 100%; object-fit: cover; height: 175px; transform: scaleX(-1)"/> -->
+          <img src="../../assets/imgs/menu/lunch.png" style = "max-width: 100%; object-fit: cover; height: 175px; box-shadow: 0 0 900px rgba(0,0,0,0.9) inset;"/>
+          <div class="card-title">Lunch</div>
+          <div class="card-subtitle">35 Items</div>
+        </ion-card>
+      </ion-col>
+      <ion-col>
+        <ion-card>
+          <!-- <img src="https://tastet.ca/wp-content/uploads/2017/11/pushap-indien-montreal-restaurant-3-1024x681.png" style = "max-width: 100%; object-fit: cover; height: 175px; transform: scaleX(-1)"/> -->
+          <img src="../../assets/imgs/menu/cold.jpg" style = "max-width: 100%; object-fit: cover; height: 175px; box-shadow: 0 0 900px rgba(0,0,0,0.9) inset;"/>
+          <div class="card-title">Cold Drinks</div>
+          <div class="card-subtitle">14 Items</div>
+        </ion-card>
+      </ion-col>
+     
+    </ion-row>
+    <ion-row>
+      <ion-col>
+        <ion-card>
+          <!-- <img src="https://static.punjabkesari.in/multimedia/2016_7image_16_51_406130260pav-bhaji--ll.jpg" style = "max-width: 100%; object-fit: cover; height: 175px;"/> -->
+          <img src="../../assets/imgs/menu/pavbhaji.jpg" style = "max-width: 100%; object-fit: cover; height: 175px; box-shadow: 0 0 900px rgba(0,0,0,0.9) inset;"/>
+          <div class="card-title">Pav Bhaji</div>
+          <div class="card-subtitle">10 Items</div>
+        </ion-card>
+      </ion-col>
+      <ion-col>
+        <ion-card>
+          <!-- <img src="http://images6.fanpop.com/image/photos/36500000/Kawaii-food-image-kawaii-food-36568606-657-473.jpg" style = "max-width: 100%; object-fit: cover; height: 175px; transform: scaleX(-1)"/> -->
+          <img src="../../assets/imgs/menu/extra.png" style = "max-width: 100%; object-fit: cover; height: 175px; box-shadow: 0 0 900px rgba(0,0,0,0.9) inset;"/>
+          <div class="card-title">Extra</div>
+          <div class="card-subtitle">6 Items</div>
+        </ion-card>
+      </ion-col>
+     
+    </ion-row>
+    <ion-row>
+      <ion-col>
+        <ion-card>
+          <!-- <img src="https://i.pinimg.com/originals/bd/9a/d5/bd9ad566f09e0522c6c9b0e4e0a26bc0.jpg" style = "max-width: 100%; object-fit: cover; height: 175px;"/> -->
+          
+          <img src="../../assets/imgs/menu/icecream.jpg" style = "max-width: 100%; object-fit: cover; height: 175px; box-shadow: 0 0 900px rgba(0,0,0,0.9) inset;"/>
+          <div class="card-title">Ice Cream</div>
+          <div class="card-subtitle">30 Items</div>
+        </ion-card>
+      </ion-col>
+      <ion-col>
+        <ion-card>
+          <!-- <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcShLcpBb8ur_EtclgeGb9f0Lsls2aTBT6Yma9pYFz_uXqgYc6o4xw" style = "max-width: 100%; object-fit: cover; height: 175px;"/> -->
+          <img src="../../assets/imgs/menu/misc.jpg" style = "max-width: 100%; object-fit: cover; height: 175px; box-shadow: 0 0 900px rgba(0,0,0,0.9) inset;"/>
+          <div class="card-title">Miscellaneous</div>
+          <div class="card-subtitle">20+ Items</div>
+        </ion-card>
+      </ion-col>
+     
+    </ion-row>
+    <ion-row>
+      <ion-col>
+        <ion-card>
+          <!-- <img src="https://www.vegrecipesofindia.com/wp-content/uploads/2017/01/paneer-kathi-roll-recipe-1.jpg" style = "max-width: 100%; object-fit: cover; height: 175px; transform: scaleX(-1)"/> -->
+          <img src="../../assets/imgs/menu/frankie.jpg" style = "max-width: 100%; object-fit: cover; height: 175px; box-shadow: 0 0 900px rgba(0,0,0,0.9) inset;"/>
+          <div class="card-title">Frankie</div>
+          <div class="card-subtitle">45 Items</div>
+        </ion-card>
+      </ion-col>
+      <ion-col>
+        <ion-card>
+          <!-- <img src="https://pbs.twimg.com/profile_images/825855788652568576/2AaoeT5m_400x400.jpg" style = "max-width: 100%; object-fit: cover; height: 175px; transform: scaleX(-1)"/> -->
+          <img src="../../assets/imgs/menu/dabeli.jpg" style = "max-width: 100%; object-fit: cover; height: 175px; box-shadow: 0 0 900px rgba(0,0,0,0.9) inset;"/>
+          <div class="card-title">Dabeli</div>
+          <div class="card-subtitle">15 Items</div>
+        </ion-card>
+      </ion-col>
+     
+    </ion-row>
+    <ion-row>
+      <ion-col>
+        <ion-card>
+          <!-- <img src="https://i.pinimg.com/originals/bf/c1/1f/bfc11f7e03afbe0beb0da464254ecbb5.jpg" style = "max-width: 100%; object-fit: cover; height: 175px; transform: scaleX(-1)"/> -->
+          <img src="../../assets/imgs/menu/juices.jpg" style = "max-width: 100%; object-fit: cover; height: 175px; box-shadow: 0 0 900px rgba(0,0,0,0.9) inset;"/>
+          <div class="card-title">Juices</div>
+          <div class="card-subtitle">11 Items</div>
+        </ion-card>
+      </ion-col>
+      <ion-col>
+        <ion-card>
+          <!-- <img src="https://i.pinimg.com/originals/d2/bc/ea/d2bcea6d9b93b11fd7c9cfc6bf423236.jpg" style = "max-width: 100%; object-fit: cover; height: 175px; transform: scaleX(-1)"/> -->
+          <img src="../../assets/imgs/menu/milkshakes.jpg" style = "max-width: 100%; object-fit: cover; height: 175px; box-shadow: 0 0 900px rgba(0,0,0,0.9) inset;"/>
+          <div class="card-title">Milk Shakes</div>
+          <div class="card-subtitle">29 Items</div>
+        </ion-card>
+      </ion-col>
+     
+    </ion-row>
+    <ion-row>
+      <ion-col>
+        <ion-card>
+          <!-- <img src="https://images6.alphacoders.com/412/412086.jpg" style = "max-width: 100%; object-fit: cover; height: 175px;"/> -->
+          <img src="../../assets/imgs/menu/pizza.jpg" style = "max-width: 100%; object-fit: cover; height: 175px; box-shadow: 0 0 900px rgba(0,0,0,0.9) inset;"/>
+          <div class="card-title">Pizza</div>
+          <div class="card-subtitle">21 Items</div>
+        </ion-card>
+      </ion-col>
+      <ion-col>
+        <ion-card>
+          <!-- <img src="http://www.wallpapermaiden.com/image/2018/08/26/pasta-vegetables-top-view-23535-resized.jpeg" style = "max-width: 100%; object-fit: cover; height: 175px;"/> -->
+          <img src="../../assets/imgs/menu/pasta.jpg" style = "max-width: 100%; object-fit: cover; height: 175px; box-shadow: 0 0 900px rgba(0,0,0,0.9) inset;"/>
+          <div class="card-title">Pasta</div>
+          <div class="card-subtitle">11 Items</div>
+        </ion-card>
+      </ion-col>
+     </ion-row>
+   
+  </ion-grid>
+
+</ion-list>
+</div>
+
+
+<div [ngSwitch]="menu">
+    <!-- <ion-list *ngSwitchCase="'full'">
+	
+  <ion-list  *ngFor="let item of menuItems |async ; let i = index"  >
+    <div *ngIf="items2[i].length>0">
+      <h2 #menuList>{{item.$key}}</h2>
+    </div>  
+    
+
+      <ion-list  *ngFor="let y of items2[i]; let j = index">
+      
+        {{initialize(y.name)}}
+        {{initializeNav()}}
+	<ion-item class="disabled" [class.disabled]="y.availability=='No'">
+      <ion-avatar item-start>
+         
+         <img src="https://firebasestorage.googleapis.com/v0/b/canteen-b59c6.appspot.com/o/Category_images%2F{{item.image}}?alt=media&token=edcbbc30-5ecd-4170-8642-220fa4329a8a">
+        </ion-avatar>
+
+
+      <ion-label> 
+          <ion-row>
+              <ion-col width-90>
+                  <h3>{{y.name}}</h3>
+                  <br> Rs.{{y.price}} <br>
+                   Available: {{y.availability}}
+              </ion-col>
+              <ion-col width-10>
+        
+                      <ion-icon name="remove-circle" (click)="decrement(y.name,y.price)"> </ion-icon>
+                      {{foodItemCount[y.name]}}
+               <ion-icon name="add-circle" (click)="increment(y.name,y.price)"> </ion-icon>
+                  
+              </ion-col>
+          </ion-row>          
+        </ion-label>       
+    </ion-item>
+  </ion-list>
+  </ion-list>
+</ion-list> -->
+
+
+
+
+<div class="container2" *ngSwitchCase="'full'">
+
+    <div class="table1"  *ngFor="let item of menuItems |async ; let i = index" >
+      <div class="table-header1" *ngIf="items2[i].length>0">
+          <div class="header__item1" >
+            <div *ngIf="items2[i].length>0">
+            <h2 #menuList>{{item.$key}}</h2>
+          </div></div>
+       <!--	<div class="header__item">Item</div>
+        <div class="header__item">Quantity</div>
+        <div class="header__item">Status</div> -->
+      </div>
+      <div class="table-content1" >
+        <div class="table-row1 disabled" *ngFor="let y of items2[i]" [class.disabled]="y.availability=='No'" >	
+            {{initialize(y.name)}}
+        {{initializeNav()}}
+            <div class="table-data1 menuImg">
+              <ion-chip>
+              <ion-avatar>
+              <!-- <img src="https://static01.nyt.com/images/2015/01/28/dining/28KITCHEN1/28KITCHEN1-articleLarge.jpg" >  -->
+              <img src="../../assets/imgs/menu/food.jpg"> 
+              <!-- <img src="https://firebasestorage.googleapis.com/v0/b/canteen-b59c6.appspot.com/o/Category_images%2F{{item.image}}?alt=media&token=edcbbc30-5ecd-4170-8642-220fa4329a8a"> -->
+             </ion-avatar>
+            </ion-chip></div>
+          <div class="table-data1 content menuDet" >
+              <h3>{{y.name}}             
+              </h3>
+              
+              
+              <div style="width: 50%; float: left; font-size: 2.2rem;"> 
+              Rs.{{y.price}} <br>
+            <!--   Available: {{y.availability}} -->
+              </div>
+              <div style="width: 50%; float: right;">
+                  Rating <br>
+                  {{y.rate}}<!--<ion-icon name="star"></ion-icon>-->
+                  </div>
+  
+          </div>
+          <div class="table-data1 menuAdd">
+            <div *ngIf="bs[i]==y.name">
+            <ion-badge class="badge">BEST SELLER </ion-badge>
+              <br>
+              </div>
+              <ion-icon name="remove-circle"  size="large" (click)="decrement(y.name,y.price)"> </ion-icon>
+              {{foodItemCount[y.name]}}
+       <ion-icon name="add-circle" size="large"  (click)="increment(y.name,y.price,y.kitchen)"> </ion-icon>
+         
+          </div>
+       
+      
+        
+      </div>	
+    </div>
+  </div>
+  </div>
+
+
+
+
+
+</div>
+
+
+  
+
+</ion-content>

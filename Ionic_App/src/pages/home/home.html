@@ -1,0 +1,46 @@
+<ion-header>
+  <h1 style="color: #fff; margin-bottom: 20px;
+  font-size: 30px;
+  
+  margin-top:20px;
+  text-align: center;
+font-family: 'Pacifico' , cursive;">Liv2Eat</h1>
+
+</ion-header>
+<h1>Canteen App</h1>
+<ion-content class="card-background-page">
+  
+        <ion-card class="homeP" (click)="goFriendsPage()">
+            <!-- <img src="https://wallpaperstream.com/wallpapers/full/friendship/Holiday-Friendship-Fun-HD-Wallpaper.jpg" style = "max-width: 100%; object-fit: cover; height: 175px"/> -->
+            <img src="../../assets/imgs/home/friends.jpg" style = "max-width: 100%; object-fit: cover; height: 175px"/>
+            <div class="card-title">Friends
+                <ion-badge id="cart-badge" class="disabled" [class.disabled]="friendNoti==0">{{friendNoti}}</ion-badge>
+            </div>
+            
+          </ion-card>
+         
+    
+  
+    <div >
+        <ion-card class="homeP" (click)="goMenuPage(id,uname)">
+            <!-- <img src="https://images.pexels.com/photos/326278/pexels-photo-326278.jpeg?auto=compress&cs=tinysrgb&h=350"  style = "max-width: 100%; object-fit: cover; height: 175px"/> -->
+            <img src="../../assets/imgs/home/menu.jpg" style = "max-width: 100%; object-fit: cover; height: 175px"/>
+            <div class="card-title" >Menu</div>
+            
+          </ion-card>
+          </div>
+
+    
+        <ion-card class = "Profile homeP" (click)="goNotificationPage(id,uname)">
+            <!-- <img src ="https://us.123rf.com/450wm/toeytoey/toeytoey1706/toeytoey170600298/80561404-close-up-hat-on-wood-texture-in-travel-and-summer-concept-.jpg?ver=6" style = "max-width: 100%; object-fit: cover; height: 175px"/> -->
+            <img src="../../assets/imgs/home/split.jpg" style = "max-width: 100%; object-fit: cover; height: 175px"/>
+            <div class="card-title" >Split Request
+                <ion-badge id="cart-badge" class="disabled" [class.disabled]="splitNoti==0">{{splitNoti}}</ion-badge>
+            </div>
+            <div class="card-subtitle"></div>
+            </ion-card>
+    
+          </ion-content>
+ 
+
+

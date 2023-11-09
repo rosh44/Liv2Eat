@@ -1,0 +1,131 @@
+{
+    "extension": "linecount",
+    "version": "0.1.7",
+    "workspace": "g:\\BE Project\\13-03",
+    "linecount": [
+        {
+            "version": "0.1.7",
+            "counttime": "2019-04-22 16:58:26",
+            "filesum": 19,
+            "codesum": 1997,
+            "commentsum": 551,
+            "blanksum": 520,
+            "filelist": [
+                {
+                    "blank": 7,
+                    "code": 15,
+                    "comment": 1,
+                    "filename": "addWalletAmount.js"
+                },
+                {
+                    "blank": 104,
+                    "code": 269,
+                    "comment": 4,
+                    "filename": "cards4.html"
+                },
+                {
+                    "blank": 24,
+                    "code": 154,
+                    "comment": 26,
+                    "filename": "getAllOrders.js"
+                },
+                {
+                    "blank": 20,
+                    "code": 92,
+                    "comment": 18,
+                    "filename": "getAllOrders2.js"
+                },
+                {
+                    "blank": 0,
+                    "code": 4,
+                    "comment": 0,
+                    "filename": "getKitchenOrders.js"
+                },
+                {
+                    "blank": 8,
+                    "code": 47,
+                    "comment": 15,
+                    "filename": "getOrders.js"
+                },
+                {
+                    "blank": 22,
+                    "code": 133,
+                    "comment": 29,
+                    "filename": "getOrders2.js"
+                },
+                {
+                    "blank": 73,
+                    "code": 139,
+                    "comment": 135,
+                    "filename": "kitchen.html"
+                },
+                {
+                    "blank": 53,
+                    "code": 120,
+                    "comment": 135,
+                    "filename": "kitchen1.html"
+                },
+                {
+                    "blank": 45,
+                    "code": 167,
+                    "comment": 91,
+                    "filename": "menu.html"
+                },
+                {
+                    "blank": 26,
+                    "code": 85,
+                    "comment": 18,
+                    "filename": "menu.js"
+                },
+                {
+                    "blank": 5,
+                    "code": 60,
+                    "comment": 0,
+                    "filename": "testrecomm.html"
+                },
+                {
+                    "blank": 61,
+                    "code": 279,
+                    "comment": 38,
+                    "filename": "try.css"
+                },
+                {
+                    "blank": 15,
+                    "code": 103,
+                    "comment": 10,
+                    "filename": "try.html"
+                },
+                {
+                    "blank": 15,
+                    "code": 100,
+                    "comment": 10,
+                    "filename": "try1.html"
+                },
+                {
+                    "blank": 15,
+                    "code": 80,
+                    "comment": 6,
+                    "filename": "wallet.html"
+                },
+                {
+                    "blank": 6,
+                    "code": 14,
+                    "comment": 5,
+                    "filename": "wallet.js"
+                },
+                {
+                    "blank": 15,
+                    "code": 104,
+                    "comment": 10,
+                    "filename": "wallet1.html"
+                },
+                {
+                    "blank": 6,
+                    "code": 32,
+                    "comment": 0,
+                    "filename": "walletTrial.html"
+                }
+            ]
+        }
+    ]
+}

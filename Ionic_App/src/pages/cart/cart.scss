@@ -1,0 +1,118 @@
+
+table
+{
+    color: white;
+    margin-left: auto;
+    margin-right: auto;
+    border: 2px solid white;
+    padding: 20px;
+    align-self: center;
+}
+th{
+    padding: 10px;
+    
+}
+.display{
+    display: none;
+}
+td{
+    padding: 10px;
+}
+.info
+{
+    margin-top: 1px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 5%;
+}
+p{
+    color: gray;
+  background: black;
+  position: relative;
+    text-align: center;
+  padding-left: 20px;
+  padding-right: 20px;
+    
+    font-family: 'Lato';
+   
+}
+
+.disabled {
+    pointer-events:none; //This makes it not clickable
+    opacity:0.3; //This grays it out to look disabled
+    }
+
+    .disabled1 {
+        pointer-events:none; //This makes it not clickable
+        opacity:0.3; //This grays it out to look disabled
+        }
+
+//checkbox
+
+.ks-cboxtags {
+    list-style: none;
+    padding: 10%;
+    vertical-align: middle;
+    align-content: center;
+    padding-left:0%;
+    margin-left: 0%;
+    margin-top:9%;
+    
+}
+//.ks-cboxtags li{
+ // display: relative;
+//}//
+.ks-cboxtags label{
+    display: inline-block;
+    background-color: rgba(255, 255, 255, .9);
+    border: 2px solid rgba(139, 139, 139, .3);
+    color: black;
+    border-radius: 25px;
+      
+    transition: all .2s;
+}
+
+.ks-cboxtags label {
+    padding: 8px 12px;
+    cursor: pointer;
+}
+
+.ks-cboxtags label::before {
+    display: relative;
+        
+    font-family: "Raleway";
+    
+    font-size: 12px;
+    padding: 2px 6px 2px 2px;
+    content: "+";
+    transition: transform .3s ease-in-out;
+}
+
+.ks-cboxtags input[type="checkbox"]:checked + label::before {
+    content: "-";
+    transform: rotate(-360deg);
+    transition: transform .3s ease-in-out;
+}
+.ks-cboxtags  input[type="checkbox"]:checked + label {
+    border: 2px solid #488aff;
+    background-color: #488aff;
+    color: #fff;
+    transition: all .2s;
+}
+
+.ks-cboxtags  input[type="checkbox"] {
+  display: absolute;
+}
+.ks-cboxtags  input[type="checkbox"] {
+  position: absolute;
+  opacity: 0;
+}
+.ks-cboxtags input[type="checkbox"]:focus + label {
+  border: 2px solid #488aff ;
+}
+
+.room
+{
+background: transparent;
+border: transparent;
+}

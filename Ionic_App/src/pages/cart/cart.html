@@ -1,0 +1,139 @@
+<ion-header>
+  
+  <ion-navbar color="dark">
+     
+    <ion-title>
+
+
+
+
+      <ion-fab left>
+          <button ion-button clear large (click)="goback()">
+              <ion-icon name="arrow-back"></ion-icon>
+          </button>
+      </ion-fab>
+        
+      <h1 style="color: #fff; margin-bottom: 20px;
+      font-size: 30px;
+      
+      margin-top:20px;
+      text-align: center;
+ font-family: 'Pacifico' , cursive;">Cart</h1>
+    </ion-title>
+  </ion-navbar> 
+  </ion-header>
+
+  <ion-content class="card-background-page">
+  
+ 
+
+  <img class= "image" src="https://st3.cricketcountry.com/wp-content/uploads/2018/09/ViratKohli4thTest.jpg">
+ <br>
+ <h3 class="cart" style="text-align: center"> Here is what you have ordered! </h3>
+ <p> You can confirm your order by clicking the button below, and also give additional details for your order</p>
+ <br><br>
+ <!--<table>
+   <thead>
+   <tr>
+  <th> Food Item     </th>
+  <th> Quantity    </th>
+  <th> Price  </th>
+  </tr>
+</thead>
+
+  <tr *ngFor="let n of ordereditems2; let i=index ">
+      <td> {{n}}</td>
+      <td> {{qty2[i]}} </td>
+      <td> Rs. {{cost2[i]}}  </td>
+      </tr>
+     
+      <tr>
+        <td>Total Amount:<td>
+          <td>Rs. {{totalPrice}}</td>
+ </table>  -->
+
+ <div class="container1">
+
+    <div class="table">
+      <div class="table-header">
+          
+        <div class="header__item">Food Item</div>
+        <div class="header__item">Quantity</div>
+        <div class="header__item">Price</div>
+      </div>
+        
+      <div   *ngFor="let n of ordereditems2; let i=index ">
+
+      
+        <div class="table-row">		
+            
+          <div class="table-data">{{n}}</div>
+          <div class="table-data">
+            <ion-icon name="remove-circle" (click)="decrement(n)"> </ion-icon>{{qty2[n]}}<ion-icon name="add-circle" (click)="increment(n)"> </ion-icon></div>
+          <div class="table-data">Rs. {{cost2[n]*qty2[n]}}</div>
+      
+        </div>
+      </div>
+
+        <div class="table-row">		
+          <div class="table-data"></div>  
+          <div class="table-data">Total Amount</div>
+          <div class="table-data">Rs. {{totalPrice}}</div>
+          
+                  
+        </div>
+        
+        
+    </div>
+    <div *ngIf="user1=='Faculty'" class = "info">
+      
+       <!-- <ion-label color="primary">
+          <ion-checkbox color="primary" [(ngModel)]="checked"> </ion-checkbox>
+          <h3>Food Delivery</h3>
+        </ion-label> -->
+ <ion-grid no-padding>
+   <ion-row>
+     <ion-col size="4" class="ion-justify-content-center">
+      <div class="ks-cboxtags">
+        <input type="checkbox" id="checkboxOne" value="Rainbow Dash"  [(ngModel)]="checked"><label for="checkboxOne">Food Delivery</label>
+      </div>
+     </ion-col>
+     <ion-col size="8" class="ion-justify-content-center">
+      <ion-item *ngIf="checked" class = "info">
+         
+        <ion-label color="primary" stacked>Room No:</ion-label>
+          <ion-input type="text" class="room" value="{{roomno}}" [(ngModel)]="rmno"></ion-input>
+        
+      </ion-item>
+     </ion-col>
+   </ion-row>
+ </ion-grid>
+       
+
+         
+        
+     
+    </div>
+       
+          
+    <ion-item class = "info">
+      <ion-label color="primary" stacked>Additional Details</ion-label>
+      <ion-input type="text" [(ngModel)]="order.Details" placeholder="Eg. No Tomatoes, Jain, etc"></ion-input>
+    </ion-item>
+
+    <div class="info">
+      <ion-label color="primary" stacked>Wallet Balance</ion-label>
+      <p style="text-align: left; margin: 0%; padding: 0%;"> Rs. {{walletBalance}} </p>
+      <p style="text-align: left" class="display"  [class.display]="walletBalance>=totalPrice ">Oh no your wallet has insufficient Balance. Please visit the main counter to recharge your wallet</p>
+      <button ion-button class="butt disabled" [class.disabled]="totalPrice==0" (click)="splitPayment(username,userId)">Split</button>
+    </div>
+
+
+    
+    <button ion-button class="buttons1 disabled disabled1" round color="light" (click)="addInDb()" [class.disabled]="totalPrice==0" [class.disabled1]="walletBalance<totalPrice ">Checkout</button> <br><br>
+      
+  </div>
+
+ 
+
+  </ion-content>

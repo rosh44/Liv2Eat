@@ -1,0 +1,79 @@
+page-contact {
+
+}
+
+ion-navbar
+{
+	height: 10px;
+}
+
+.disabled{
+  display: none;
+}
+.card-background-page {
+background: black;
+
+
+  ion-card  {
+    position: relative;
+    text-align: center;
+    margin-top: 15px;
+    box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+    margin-bottom: 5%;
+    border-radius: 10px;
+  }
+  h1{
+      color: #fff;
+      margin-bottom: 20px;
+      font-size: 30px;
+      
+      margin-top:20px;
+      text-align: center;
+ font-family: 'Pacifico' , cursive;
+  }
+  h2{
+    color: #fff;
+    font-size: 30px;
+    text-align: left;
+ font-family: 'Raleway' , sans-serif;
+ margin-left: 10px;
+  }
+  h3{
+    color: #fff;
+    font-size: 20px;
+    text-align: left;
+ font-family: 'Lato' , sans-serif;
+ 
+  }
+
+  .card-title {
+    position: absolute;
+    text-align: left;
+    padding-left: 10px;
+    font-size: 2.0em;
+    font-family: 'Raleway', sans-serif;
+    width: 100%;
+    font-weight: bold;
+    color: #fff;
+    opacity:1.0;
+  }
+
+
+  .card-subtitle {
+    font-size: 1.0em;
+    position: absolute;
+    text-align: left;
+    font-family: 'Lato', sans-serif;
+    padding-left: 10px;
+    width: 100%;
+    color: #fff;
+  }
+.homeP
+{
+  margin-top: 1%;
+  margin-bottom: 3%;
+  margin-left: 2%;
+  margin-right: 2%;
+  
+}
+}

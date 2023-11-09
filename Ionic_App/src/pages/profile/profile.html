@@ -1,0 +1,33 @@
+<ion-header>
+ 
+  <ion-navbar color="dark">
+    <ion-title>
+      <h1 style="color: #fff; margin-bottom: 20px;
+      font-size: 30px;
+      
+      margin-top:20px;
+      text-align: center;
+ font-family: 'Pacifico' , cursive;">Profile</h1>
+    </ion-title>
+  </ion-navbar> 
+  </ion-header>
+
+  <ion-content class="card-background-page">
+  
+ 
+
+  <img class= "image" src="https://st3.cricketcountry.com/wp-content/uploads/2018/09/ViratKohli4thTest.jpg">
+ <br>
+ <h2 style="text-align: center; margin-bottom: 0%; padding-bottom:0%;">{{name}} {{last}}</h2>
+<p style="margin-top: 0%; padding-top:0%;">{{email}}</p> 
+<h3 style="text-align: center; padding-bottom: 0%; margin-bottom: 0%;">Wallet Balance<p style="padding: 0%; margin-top:0%;">Rs: {{walletBalance}}</p></h3>
+
+<button ion-button class="buttons1" round color="light" (click)="goDemoPage()">Previous Orders</button> <br><br>
+<!-- <button ion-button class="buttons1" id="wallet" round color="light" (click)="goWalletPage()">Wallet</button> <br><br> -->
+<button ion-button class="buttons1" round color="light" (click)="goFriendsPage()">Friends</button> <br><br>
+<button ion-button class="buttons1" round color="light" (click)="logout()">Logout</button> <br><br>
+
+
+  </ion-content>
+
+

@@ -1,0 +1,32 @@
+page-splitcart {
+
+}
+.disabled {
+    pointer-events:none; //This makes it not clickable
+    opacity:0.3; //This grays it out to look disabled
+    }
+
+    .disabled1 {
+        pointer-events:none; //This makes it not clickable
+        opacity:0.3; //This grays it out to look disabled
+        }
+        
+        .enableWatch {
+            color:rgb(14, 4, 105);
+            }
+        .enable {
+            color:green;
+            }
+        .enabled{
+            color:red;
+        }
+        .disableCheck{
+            display:none;
+        }
+        .disabledClose
+        {
+            display:none;
+        }
+        .dispay{
+            display: none;
+        }

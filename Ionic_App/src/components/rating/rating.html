@@ -1,0 +1,24 @@
+<!-- Generated template for the RatingComponent component -->
+<div class="rating">
+    <div class="table-header1">
+        <div class="header__item1 header" >
+          
+          <h2 style="text-align: left; padding-left: 3px; padding-bottom: 3px;">RATE YOUR ORDER</h2>
+        </div>
+     <!--	<div class="header__item">Item</div>
+      <div class="header__item">Quantity</div>
+      <div class="header__item">Status</div> -->
+    </div>
+    <p style="padding-left: 10px; text-align: left;">We hope you enjoyed your meal! <br> Please help us improve our servcies by rating your order below</p>
+     <h3 style="color: white; text-align: left; padding-left: 10px; ">Order Id: <span class="cont"> {{id}}  </span> <br> Food: <span class="cont">  {{ foodItem }}  </span></h3>
+
+     <div class="stars">
+        <ion-icon  id="star" name="star" *ngFor="let num of [1,2,3,4,5]" (click)="rate(num)" [ngStyle]="{'color':getColor(num)}">
+          </ion-icon> <br> 
+
+          <button class="butt" style="background: #00bfff;" ion-button (click)="buttonsendrating(foodItem)">Rate</button>
+  <button class="butt1" ion-button color="light" (click)="closeModal()">Cancel</button>
+     </div>
+  
+  
+</div>

@@ -1,0 +1,4 @@
+function tryMe()
+{
+	alert("a");
+}

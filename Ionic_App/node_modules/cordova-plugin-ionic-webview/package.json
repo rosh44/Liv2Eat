@@ -1,0 +1,151 @@
+{
+  "_args": [
+    [
+      {
+        "raw": "cordova-plugin-ionic-webview@^2.0.0",
+        "scope": null,
+        "escapedName": "cordova-plugin-ionic-webview",
+        "name": "cordova-plugin-ionic-webview",
+        "rawSpec": "^2.0.0",
+        "spec": ">=2.0.0 <3.0.0",
+        "type": "range"
+      },
+      "C:\\Users\\sonal\\Documents\\roshni\\BE project\\ionic\\myApp\\myApp"
+    ]
+  ],
+  "_from": "cordova-plugin-ionic-webview@^2.0.0",
+  "_hasShrinkwrap": false,
+  "_id": "cordova-plugin-ionic-webview@2.3.1",
+  "_location": "/cordova-plugin-ionic-webview",
+  "_nodeVersion": "10.14.1",
+  "_npmOperationalInternal": {
+    "host": "s3://npm-registry-packages",
+    "tmp": "tmp/cordova-plugin-ionic-webview_2.3.1_1544125803235_0.07115772308438562"
+  },
+  "_npmUser": {
+    "name": "ionicjs",
+    "email": "hi@ionicframework.com"
+  },
+  "_npmVersion": "6.4.1",
+  "_phantomChildren": {},
+  "_requested": {
+    "raw": "cordova-plugin-ionic-webview@^2.0.0",
+    "scope": null,
+    "escapedName": "cordova-plugin-ionic-webview",
+    "name": "cordova-plugin-ionic-webview",
+    "rawSpec": "^2.0.0",
+    "spec": ">=2.0.0 <3.0.0",
+    "type": "range"
+  },
+  "_requiredBy": [
+    "#USER",
+    "/"
+  ],
+  "_resolved": "https://registry.npmjs.org/cordova-plugin-ionic-webview/-/cordova-plugin-ionic-webview-2.3.1.tgz",
+  "_shasum": "13106cef1354b8aa8a4a6ef879f8759a2e707f49",
+  "_shrinkwrap": null,
+  "_spec": "cordova-plugin-ionic-webview@^2.0.0",
+  "_where": "C:\\Users\\sonal\\Documents\\roshni\\BE project\\ionic\\myApp\\myApp",
+  "author": {
+    "name": "Ionic Team"
+  },
+  "bugs": {
+    "url": "https://github.com/ionic-team/cordova-plugin-ionic-webview/issues"
+  },
+  "config": {
+    "commitizen": {
+      "path": "./node_modules/cz-conventional-changelog"
+    }
+  },
+  "dependencies": {},
+  "description": "Ionic Web View Engine Plugin",
+  "devDependencies": {
+    "@semantic-release/changelog": "^3.0.0",
+    "@semantic-release/exec": "^3.3.0",
+    "@semantic-release/git": "^7.0.4",
+    "@semantic-release/github": "^5.0.6",
+    "@semantic-release/npm": "^5.0.4",
+    "commitizen": "^3.0.2",
+    "cz-conventional-changelog": "^2.1.0",
+    "semantic-release": "^15.9.17",
+    "sync-cordova-xml": "^0.4.0"
+  },
+  "directories": {},
+  "dist": {
+    "integrity": "sha512-tGKRp2iEYbOwZ2sT/uBU2C1YW1a43QI3YGi4WMH4LsgUdDjYGj4OZ8o7xQtRlxOKpdAjtSyLn1wz3Jip04elMg==",
+    "shasum": "13106cef1354b8aa8a4a6ef879f8759a2e707f49",
+    "tarball": "https://registry.npmjs.org/cordova-plugin-ionic-webview/-/cordova-plugin-ionic-webview-2.3.1.tgz",
+    "fileCount": 52,
+    "unpackedSize": 394941,
+    "npm-signature": "-----BEGIN PGP SIGNATURE-----\r\nVersion: OpenPGP.js v3.0.4\r\nComment: https://openpgpjs.org\r\n\r\nwsFcBAEBCAAQBQJcCX1rCRA9TVsSAnZWagAAHNwP/jAfy4yP5Ou4vUEuomMF\nYjYEM/HaNQ6w0+HXjiUwbRm7jkf87i8R7QqxIGshvCsxtnd99V4U8rUaU9uw\niuYqtgsCWMtoojE617P10iP7X79dVLkchqM9GbsejmtSkT6NR2Icvi2gd7MQ\n0UlQoeR2X3UD5VW4EV+ndwo20Qu9lFImBucC68+yh7j9E8f6RI4YKTbm37kX\nMrWlPYnXq0Ey0Q6xLJxy5Q1dFum3DvzZWIzocFwXVyPafKLVe1fGTU4LTnGh\nl8pGSVRscnzofCH3Z8xqJdLAt92NYKhSYg9E4h3tTleV2y1GlAuOwHX6Kjy8\nJT5pREBdaWTc8MtP7D//nMzHQr7aoI+0UUk2KDLJLdeSRQn3i1kSpytWXv8D\n2hD78e1dmhhedi8UUVmuu/1hx25cwNfBQejW/Xs5LpJ/fmshZFkhAsMD1Dcm\nRKeV1fK4XglQQIE7zfLLR+kgJzZHcgwZaDWFPAo2HO8/MUiOX3ztgrQWVn7Z\nGo7C+DhxUHgaHGM4JGbUqIgvuvw4E7dl78YRg3yhd1UOfpyUEdI5MTB/l+Lz\n1ZLDw4V9R//ndTNT5ab6B9Iq+EKk5TJ89CTfvkv5dzgMMfZZJegbbdtmBoUl\n+3rmN0GebUafDMdfwhYGnEmcILcSPvI4b50PDj2iUo2RyVc2f3gpdVUI/V9G\nIhf1\r\n=Zu4G\r\n-----END PGP SIGNATURE-----\r\n"
+  },
+  "engines": {
+    "cordovaDependencies": {
+      "2.0.0": {
+        "cordova-android": ">=6.4.0",
+        "cordova-ios": ">=4.0.0-dev"
+      }
+    }
+  },
+  "gitHead": "f0ca88fdd48ea9212120bc0b9cd598af1892fdee",
+  "homepage": "https://github.com/ionic-team/cordova-plugin-ionic-webview#readme",
+  "keywords": [
+    "cordova",
+    "wkwebview"
+  ],
+  "license": "Apache-2.0",
+  "maintainers": [
+    {
+      "name": "manucorporat",
+      "email": "manu.mtza@gmail.com"
+    },
+    {
+      "name": "maxlynch",
+      "email": "max@ionic.io"
+    },
+    {
+      "name": "nhyatt",
+      "email": "nick@ionic.io"
+    }
+  ],
+  "name": "cordova-plugin-ionic-webview",
+  "optionalDependencies": {},
+  "readme": "<!--\n# license: Licensed to the Apache Software Foundation (ASF) under one\n#         or more contributor license agreements.  See the NOTICE file\n#         distributed with this work for additional information\n#         regarding copyright ownership.  The ASF licenses this file\n#         to you under the Apache License, Version 2.0 (the\n#         \"License\"); you may not use this file except in compliance\n#         with the License.  You may obtain a copy of the License at\n#\n#           http://www.apache.org/licenses/LICENSE-2.0\n#\n#         Unless required by applicable law or agreed to in writing,\n#         software distributed under the License is distributed on an\n#         \"AS IS\" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY\n#         KIND, either express or implied.  See the License for the\n#         specific language governing permissions and limitations\n#         under the License.\n-->\n\n<!-- TODO: remove beta in README.md and CONTRIBUTING.md -->\n\n[![semantic-release](https://img.shields.io/badge/%20%20%F0%9F%93%A6%F0%9F%9A%80-semantic--release-e10079.svg)](https://github.com/semantic-release/semantic-release)\n[![Dependabot Status](https://api.dependabot.com/badges/status?host=github&identifier=104773211)](https://dependabot.com)\n[![npm](https://img.shields.io/npm/v/cordova-plugin-ionic-webview.svg)](https://www.npmjs.com/package/cordova-plugin-ionic-webview)\n\n# Ionic Web View for Cordova\n\nA Web View plugin for Cordova, focused on providing the highest performance experience for Ionic apps (but can be used with any Cordova app).\n\nThis plugin defaults to using WKWebView on iOS and the latest evergreen webview on Android. Additionally, this plugin makes it easy to use HTML5 style routing\nthat web developers expect for building single-page apps.\n\nNote: This repo and its documentation are for `cordova-plugin-ionic-webview` @ `2.x`, which uses the new features that may not work with all apps. See [Requirements](#requirements) and [Migrating to 2.x](#migrating-to-2x).\n\n:book: **Documentation**: [https://beta.ionicframework.com/docs/building/webview][ionic-webview-docs]\n\n:mega: **Support/Questions?** Please see our [Support Page][ionic-support] for general support questions. The issues on GitHub should be reserved for bug reports and feature requests.\n\n:sparkling_heart: **Want to contribute?** Please see [CONTRIBUTING.md](https://github.com/ionic-team/cordova-plugin-ionic-webview/blob/master/CONTRIBUTING.md).\n\n## Configuration\n\nThis plugin has several configuration options that can be set in `config.xml`. Important: some configuration options should be adjusted for production apps, especially `WKPort`:\n\n### iOS and Android Preferences\n\nPreferences available for both iOS and Android platforms\n\n#### WKPort \n\n```xml\n<preference name=\"WKPort\" value=\"8080\" />\n```\n\nThe default port the server will listen on. _You should change this to a random port number!_\n\n### iOS Preferences\n\nPreferences only available for iOS platform\n\n#### UseScheme\n\n`<preference name=\"UseScheme\" value=\"true\" />`\n\nDefault value is `false`.\n\nOn iOS 11 and newer it will use a `WKURLSchemeHandler` that loads the app from `ionic://` scheme instead of using the local web server and `https://` scheme.\n\nOn iOS 10 and older will continue using the local web server even if the preference is set to `true`.\n\n#### HostName\n\n`<preference name=\"HostName\" value=\"myHostName\" />`\n\nDefault value is `app`.\n\nIf `UseScheme` is set to yes, it will use the `HostName` value as the host of the starting url.\n\nExample `ionic://app`\n\n#### WKSuspendInBackground\n\n```xml\n<preference name=\"WKSuspendInBackground\" value=\"false\" />\n```\n\nWhether to try to keep the server running when the app is backgrounded. Note: the server will likely be suspended by the OS after a few minutes. In particular, long-lived background tasks are not allowed on iOS outside of select audio and geolocation tasks.\n\n#### WKBind\n\n```xml\n<preference name=\"WKBind\" value=\"localhost\" />\n```\n\nThe hostname the server will bind to. There aren't a lot of other valid options, but some prefer binding to \"127.0.0.1\"\n\n#### WKInternalConnectionsOnly (New in 2.2.0)\n\n```xml\n<preference name=\"WKInternalConnectionsOnly\" value=\"true\" />\n```\n\nWhether to restrict access to this server to the app itself. Previous versions of this plugin did not restrict access to the app itself. In 2.2.0 and above,\nthe plugin now restricts access to only the app itself.\n\n#### KeyboardAppearanceDark\n\n```xml\n<preference name=\"KeyboardAppearanceDark\" value=\"false\" />\n```\n\nWhether to use a dark styled keyboard on iOS\n\n## Plugin Requirements\n\n* **iOS**: iOS 10+ and `cordova-ios` 4+\n* **Android**: Android 4.4+ and `cordova-android` 6.4+\n\n## Migrating to 2.x\n\n1. Remove and re-add the Web View plugin:\n\n    ```\n    cordova plugin rm cordova-plugin-ionic-webview\n    cordova plugin add cordova-plugin-ionic-webview@latest\n    ```\n\n1. Apps are now served from HTTP on Android.\n\n    * The origin for requests from the Web View is `http://localhost:8080`.\n\n1. Replace any usages of `window.Ionic.normalizeURL()` with `window.Ionic.WebView.convertFileSrc()`.\n\n    * For Ionic Angular projects, there is an [Ionic Native wrapper](https://beta.ionicframework.com/docs/native/ionic-webview):\n\n        ```\n        npm install @ionic-native/ionic-webview@beta\n        ```\n\n[ionic-homepage]: https://ionicframework.com\n[ionic-docs]: https://ionicframework.com/docs\n[ionic-webview-docs]: https://beta.ionicframework.com/docs/building/webview\n[ionic-support]: https://ionicframework.com/support\n",
+  "readmeFilename": "README.md",
+  "release": {
+    "branch": "stable",
+    "verifyConditions": [
+      "@semantic-release/changelog",
+      "@semantic-release/npm",
+      "@semantic-release/git",
+      "@semantic-release/github"
+    ],
+    "prepare": [
+      "@semantic-release/changelog",
+      "@semantic-release/npm",
+      "@semantic-release/exec",
+      "@semantic-release/git"
+    ],
+    "publish": [
+      "@semantic-release/github",
+      "@semantic-release/npm"
+    ],
+    "success": [
+      "@semantic-release/github"
+    ],
+    "failure": [
+      "@semantic-release/github"
+    ],
+    "prepareCmd": "npm run version"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ionic-team/cordova-plugin-ionic-webview.git"
+  },
+  "scripts": {
+    "cz": "git-cz",
+    "sync_plugin_xml": "sync-cordova-xml package.json plugin.xml --output=plugin.xml",
+    "version": "npm run sync_plugin_xml && git add plugin.xml"
+  },
+  "version": "2.3.1"
+}

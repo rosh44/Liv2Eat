@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<title>
+    Liv2Eat
+</title>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link href="https://fonts.googleapis.com/css?family=Lato|Pacifico|Raleway" rel="stylesheet">
+
+<link href="https://gitcdn.github.io/bootstrap-toggle/2.2.2/css/bootstrap-toggle.min.css" rel="stylesheet">
+<script src="https://gitcdn.github.io/bootstrap-toggle/2.2.2/js/bootstrap-toggle.min.js"></script>
+
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.1/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+<link href="try.css" rel="stylesheet">
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut" crossorigin="anonymous"></script>
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k" crossorigin="anonymous"></script>
+
+
+
+
+</head>
+<body>
+
+    <!-- Navbar -->
+        <nav class="navbar navbar-expand-sm bg-dark fixed-top">
+            <div class="container">
+                    <a id="liv" class="navbar-brand " href="try.html">Liv2Eat</a>
+                    <button class="navbar-toggler navbar-dark" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                      <span class="navbar-toggler-icon"></span>
+                    </button>
+                  
+                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                      <ul class="navbar-nav mr-auto px-5">
+                        <li class="nav-item mx-3">
+                          <a class="nav-link active" href="#">MENU<span class="sr-only">(current)</span></a>
+                        </li>
+                        <li class="nav-item mx-3 ">
+                          <a class="nav-link" href="#">SALES</a>
+                        </li>
+                        <li class="nav-item mx-3 ">
+                                <a class="nav-link" href="#">ORDERS</a>
+                              </li>
+                        
+                        
+                      </ul>
+                      <ul class="navbar-nav px-5">
+                            <li class="nav-item">
+                                    <a class="nav-link" href="#">LOGOUT<span class="sr-only"></span></a>
+                                  </li>
+                                  
+                      </ul>
+                    </div>
+            </div>
+              </nav>
+
+              <!-- CONTENT -->
+              <div class="container-fluid mt-5 pt-4">
+                  <div class="row justify-content-center">
+                      <div class="col-8 text-center">
+                          <h1 class="display-4">Menu</h1>
+                      </div>
+                  </div>
+              </div>
+               
+            <!-- DROP DOWN MENU -->
+            <div class="container">
+                    <div class="row justify-content-center">
+                          
+
+                            <div class="col-8 text-center">
+                                    <div class="dropdown mt-3">
+                                            <a class="btn btn-secondary dropdown-toggle btn-info categ scrollable-menu" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                              FULL MENU
+                                            </a>
+                                          
+                                            <div class="dropdown-menu categ scrollable-menu " aria-labelledby="dropdownMenuLink">
+
+                                                <div class="row">
+                                                    <div class="col-lg-4 col-md-6 col-sm-12" id="menu_category1">
+                                                            
+                                                    </div>
+                                                    <div class="col-lg-4 col-md-6 col-sm-12" id="menu_category2">
+                                                            
+                                                    </div>
+                                                    <div class="col-lg-4 col-md-6 col-sm-12" id="menu_category3">
+                                                            
+                                                    </div>
+                                                </div>
+                                            
+                                            </div>
+                                          </div>
+                            </div>
+                        </div>
+                    
+                     <!-- FULL MENU -->
+<!--
+                     <table id="div0" class="table mt-3 t1 justify-content-center targetDiv">
+                            <thead class="thead-dark">
+                              <tr>
+                                <th scope="col">#</th>
+                                <th scope="col">ITEM</th>
+                                <th scope="col">AVAILABILITY</th>
+                                <th scope="col">PRICING</th>
+                              </tr>
+                            </thead>
+                            <tbody>
+                              <tr>
+                                <th scope="row">1</th>
+                                <td>Mark</td>
+                                <td>Otto</td>
+                                <td>@mdo</td>
+                              </tr>
+                              <tr>
+                                <th scope="row">2</th>
+                                <td>Jacob</td>
+                                <td>Thornton</td>
+                                <td>@fat</td>
+                              </tr>
+                              <tr>
+                                <th scope="row">3</th>
+                                <td>Larry</td>
+                                <td>the Bird</td>
+                                <td>@twitter</td>
+                              </tr>
+                            </tbody>
+                          </table>
+
+
+
+            </div>   
+
+-->
+            <!-- MENU by Category-->
+
+            <!--Category 1, with ID div1-->
+            <table id="div1" class="table mt-3 t1 justify-content-center targetDiv">
+              <thead class="thead-dark">
+                <tr>
+                  <th scope="col" class="d-none d-sm-block">#</th>
+                  <th scope="col" >ITEM</th>
+                  <th scope="col" class="d-none d-sm-block">PRICING</th>
+                  <th scope="col" >AVAILABILITY</th>
+				          
+                </tr>
+              </thead>
+              <tbody id="table_body">
+                <!--<tr>
+                  <th scope="row">1</th>
+                  <td>Mark</td>
+                  <td>Otto</td>
+                  <td>@mdo</td>
+                </tr>-->
+              </tbody>
+            </table>
+
+            <!--Category 2, with ID div2-->
+           <!-- <table id="div2" class="table mt-3 t1 justify-content-center targetDiv">
+              <thead class="thead-light">
+                <tr>
+                  <th scope="col">#</th>
+                  <th scope="col">ITEM</th>
+                  <th scope="col">AVAILABILITY</th>
+                  <th scope="col">PRICING</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <th scope="row">1</th>
+                  <td>Mark</td>
+                  <td>Otto</td>
+                  <td>@mdo</td>
+                </tr>
+              </tbody>
+            </table>
+
+            <!--Category 3, with ID div3-->
+         <!--   <table id="div3" class="table mt-3 t1 justify-content-center targetDiv">
+              <thead class="thead-info">
+                <tr>
+                  <th scope="col">#</th>
+                  <th scope="col">ITEM</th>
+                  <th scope="col">AVAILABILITY</th>
+                  <th scope="col">PRICING</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <th scope="row">1</th>
+                  <td>Mark</td>
+                  <td>Otto</td>
+                  <td>@mdo</td>
+                </tr>
+              </tbody>
+            </table>
+
+            <!--Similarly copy paste the above menu code and just change the ID to div4, div5, and so on! -->
+            
+          
+ <!-- Add Items -->
+
+ <i class="far fa-plus-square plus d-flex justify-content-center" data-toggle="modal" data-target="#exampleModalCenter"> <p class="addi pl-4">ADD ITEMS</p></i>
+
+
+
+
+ <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLongTitle">Add Menu Item</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <form>
+            <div class="form-group">
+                <label for="exampleInputEmail1">ITEM ID</label>
+                <input type="number" class="form-control" id="addId" aria-describedby="emailHelp" placeholder="">
+               </div>
+               <div class="form-group">
+                  <label for="exampleInputEmail1">CATEGORY</label>
+                  <input type="text" class="form-control" id="addCategory" aria-describedby="emailHelp" placeholder="Category">
+                 </div>
+          <div class="form-group">
+            <label for="exampleInputEmail1">ITEM NAME</label>
+            <input type="text" class="form-control" id="addName" aria-describedby="emailHelp" placeholder="Item Name">
+           </div>
+          <div class="form-group">
+            <label for="exampleInputPassword1">PRICE</label>
+            <input type="text" class="form-control" id="addPrice" placeholder="Price in Rupees">
+          </div>
+          
+          
+        </form>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">CLOSE</button>
+        <button type="button" class="btn btn-primary" onclick="addItems()">ADD ITEMS</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+
+
+<script>
+
+$('#myModal').on('shown.bs.modal', function () {
+  $('#myInput').trigger('focus')
+})
+
+/*$(function(){
+    $("#123").hide();
+    $("#1234").hide();
+    $("#12345").hide();
+    $("#d1").on("click", function(){
+        $("#123").show();
+        $("#full").hide();
+    });
+    $("#d2").on("click", function(){
+        $("#1234").show();
+    });
+    $("#d3").on("click", function(){
+        $("#12345").show();
+    });
+}); */
+
+
+/*
+jQuery(function(){
+         jQuery('#showall').click(function(){
+               jQuery('.targetDiv').hide();
+        });
+        jQuery('.targetDiv').hide();
+        jQuery('#div0').show();
+        jQuery('.dropdown-item').click(function(){
+              jQuery('.targetDiv').hide();
+              jQuery('#div'+$(this).attr('target')).show();
+        });
+});*/
+</script>
+</body>
+<script src="https://www.gstatic.com/firebasejs/5.7.2/firebase.js"></script>
+<script>
+  // Initialize Firebase
+  var config = {
+    apiKey: "AIzaSyDAAPiZM3ar79SWsmd2lXU0Y14po5t3Ho8",
+    authDomain: "canteen-b59c6.firebaseapp.com",
+    databaseURL: "https://canteen-b59c6.firebaseio.com",
+    projectId: "canteen-b59c6",
+    storageBucket: "canteen-b59c6.appspot.com",
+    messagingSenderId: "210011172914"
+  };
+  firebase.initializeApp(config);
+  
+  </script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+<script src="menu.js"></script>

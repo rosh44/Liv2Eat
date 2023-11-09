@@ -1,0 +1,393 @@
+#liv.navbar-brand
+{
+font-family: "Pacifico";
+font-size: 1.5rem;
+color: white;
+}
+#liv.navbar-brand:hover
+{
+background: #00bfff;
+
+}
+
+.nav-item .nav-link 
+{
+    font-family: "Raleway";
+    color: white;
+   letter-spacing: 0.2rem;
+}
+.nav-item:hover
+{
+background: #00bfff;
+}
+.active 
+{
+    background: #FF3333;
+    width: max-content;
+}
+.display-4
+{
+    font-family: "Pacifico";
+}
+
+#dropdownMenuLink
+{
+    font-family: "Raleway";
+    color: white;
+   letter-spacing: 0.5rem;
+   text-transform: uppercase;
+}
+
+.categ
+{
+    width: 100%;
+    font-family: "Raleway";
+    
+}
+
+a:hover{
+    background-color: #00bfff;
+}
+.t1
+{
+    max-width: 66%;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    font-family: "Raleway";
+    
+}
+th{
+    letter-spacing: 0.2rem;
+}
+
+.scrollable-menu {
+    height: auto;
+    max-height: 200px;
+    overflow-x: hidden;
+}
+#prev.btn-secondary
+{
+    background: #42464b;
+    width: 20rem;
+    font-family: "Raleway";
+    color: white;
+   letter-spacing: 0.5rem;
+   border-radius: 0%;
+   border-color: black
+}
+#new.btn-secondary
+{
+    background: #FF3333;
+    width: 20rem;
+    font-family: "Raleway";
+    
+    color: white;
+   letter-spacing: 0.5rem;
+   border-radius: 0%;
+   border-color: black
+}
+
+.btn-secondary.change
+{
+    border-radius: 0%;
+    font-family: "Raleway";
+    letter-spacing: 0.2em;
+    align-content: center;
+    background: #FF3333;
+    border-color:#00bfff;
+}
+
+.fa-plus-square
+{
+    color: #FF3333;
+    font-size: 2rem;
+   
+    
+}
+.addi
+{
+    font-family: 'Raleway';
+
+}
+@media (max-width: 1200px) 
+{
+    #prev.btn-secondary
+    {
+        
+        width: 10rem;
+        letter-spacing: 0rem;
+    }
+    #new.btn-secondary
+    {
+       
+        width: 10rem;
+        
+       letter-spacing: 0rem;
+    } 
+}
+.order1
+{
+    background: #FF3333;
+    color: white;
+    }
+    .order2
+{
+    background: #66CD00;
+    color: white;
+    }
+
+    .order3
+{
+    background: #868e96;
+    color: white;
+    }
+.orderCom
+{
+    background: #42464b;
+    color: white;
+}
+
+
+
+
+/* @media (max-width: 1200px) {
+    .categ
+{
+    width: 35.0rem;
+} 
+
+#dropdownMenuLink
+{
+    
+   letter-spacing: 0.3rem;
+}
+}
+
+@media (max-width: 1000px) {
+    .categ
+{
+    width: 80%;
+}
+}
+
+@media (max-width: 500px) {
+    .categ
+{
+    width: 17.0rem;
+}
+#dropdownMenuLink
+{
+    
+   letter-spacing: 0.2rem;
+}
+}*/
+
+
+
+
+
+/* The switch - the box around the slider */
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 80px;
+    height: 34px;
+    float:center;
+  }
+  
+  /* Hide default HTML checkbox */
+  .switch input {display:none;}
+  
+  /* The slider */
+  .slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    -webkit-transition: .4s;
+    transition: .4s;
+  }
+  
+  .slider:before {
+    position: absolute;
+    content: "";
+    height: 26px;
+    width: 26px;
+    left: 4px;
+    bottom: 4px;
+    background-color: white;
+    -webkit-transition: .4s;
+    transition: .4s;
+  }
+  
+  input.default:checked + .slider {
+    background-color: #00bfff;
+    
+
+    
+  }
+  
+  
+  input:focus + .slider {
+    box-shadow: 0 0 1px #00bfff;
+  }
+  
+  input:checked + .slider:before {
+    -webkit-transform: translateX(26px);
+    -ms-transform: translateX(26px);
+    transform: translateX(46px);
+  }
+  
+  /* Rounded sliders */
+  .slider.round {
+    border-radius: 34px;
+  }
+  
+  .slider.round:before {
+    border-radius: 50%;
+    
+  }
+  
+  
+  .on
+{
+  display: none;
+}
+
+.on, .off
+{
+  color: white;
+  position: absolute;
+  transform: translate(-60%,-60%);
+  top: 50%;
+  left: 40%;
+  font-size: 0.7rem;
+  font-family: 'Raleway';
+  letter-spacing: 0.2em;
+}
+.off
+{
+  left:65%;
+  color: black;
+}
+input:checked+ .slider .on
+{display: block;}
+
+input:checked + .slider .off
+{display: none;}
+
+
+
+/* Kitchen buttons */
+
+.btn1 {
+  width: 300px;
+  
+  appearance: none;
+  background-color: transparent;
+  
+  cursor: pointer;
+  display: flex;
+  align-self: center;
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1;
+  margin: 20px;
+  padding: 1.2em 1.2em;
+  text-decoration: none;
+  text-align: center;
+  text-transform: uppercase;
+  
+}
+  
+  
+
+.third {
+  border-color: #00bfff;
+  color: white;
+  background: #42464b;
+  font-family: 'Raleway';
+  letter-spacing: 0.2rem;
+  /*box-shadow: 0 0 40px 40px #00bfff inset, 0 0 0 0 #00bfff;*/
+  box-shadow: 0 0 10px 0 #00bfff inset, 0 0 10px 4px #00bfff;
+  transition: all 150ms ease-in-out;
+}
+
+.third:focus{
+  color: #00bfff;
+}
+.txt
+{
+  font-size: 2.0rem;
+  vertical-align: middle;
+  text-align: center;
+  padding-left: 5%;
+  padding-top:5%;
+  font-family: 'Raleway';
+
+}
+.third:hover
+{
+  background: transparent;
+  color: #42464b;
+  border-color: #FF3333;
+  box-shadow: 0 0 10px 0 #FF3333 inset, 0 0 10px 4px #FF3333;
+  transition: ease-in-out;
+  
+  transform: scale(1.1);
+}
+
+/*cards*/
+.card 
+{
+  box-shadow: 0 19px 38px rgba(0,0,0,0.30), 0 15px 12px rgba(0,0,0,0.22);
+  font-family: 'Lato';
+  margin: 10px;
+}
+.card-header  {
+  font-size: 1.5rem;
+}
+.card-header.pend
+{
+  background: #FF3333;
+  color: white;
+  
+}
+.card-header.ready
+{
+  background: #5cb85c;
+  color: white;
+}
+.card-header.collected
+{
+  background: #42464b;
+  color: white;
+}
+.oldOR 
+{
+  color: 	#A9A9A9;
+  text-decoration: none;
+  
+  
+
+}
+.oldOR:hover
+{
+  color: #FF3333;
+  text-decoration: none;
+}
+.card-text
+{
+  font-size: 1.5rem;
+  font-family: "Raleway"
+}
+.extra
+{
+  font-family: 'Lato';
+  font-size: 1.0rem;
+  color: gray;
+}

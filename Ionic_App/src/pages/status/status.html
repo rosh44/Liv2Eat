@@ -1,0 +1,174 @@
+
+<ion-header>
+ 
+  <ion-navbar color="dark">
+    <ion-title>
+      <h1 style="color: #fff; margin-bottom: 20px;
+      font-size: 30px;
+      
+      margin-top:20px;
+      text-align: center;
+ font-family: 'Pacifico' , cursive;">Order Status</h1>
+
+    </ion-title>
+    
+  </ion-navbar> 
+ </ion-header>
+
+<ion-content class="card-background-page" >
+
+  <ion-refresher (ionRefresh)="doRefresh($event)">
+    <ion-refresher-content
+      pullingIcon="arrow-dropdown"
+      pullingText="Pull to refresh"
+      refreshingSpinner="circles"
+      refreshingText="Refreshing..."      
+      >
+    </ion-refresher-content>
+  </ion-refresher>
+
+
+<!--
+<table class="table-fill">
+<thead>
+<tr>
+
+<th class="text-left">Id </th>
+<th class="text-left">Item</th>
+<th class="text-left">Quantity</th>
+<th class="text-left">Status</th>
+
+</tr>
+</thead>
+<div *ngFor="let x of myOrders">
+ <tr *ngFor="let y of x.order.split(',') ">
+  <td class="text-left">{{x.id}} </td>
+  <td class="text-left">{{y}} </td>
+  <td class="text-left">{{x.quantity}} </td>
+  <td class="text-left">{{x.status}}</td>  
+</tr>
+</div>
+</table> -->
+<!--
+<ion-segment [(ngModel)]="menu">
+  <ion-segment-button value="All" (click)="tryLoad('All')" style="font-family: Lato">
+    All Orders
+  </ion-segment-button>
+  <ion-segment-button value="Dosa" (click)="tryLoad('Dosa')" style="font-family: Lato">
+    Dosa-Items
+  </ion-segment-button>
+  <ion-segment-button value="Chinese" (click)="tryLoad('Chinese')" style="font-family: Lato">
+      Chinese
+    </ion-segment-button>
+</ion-segment>
+ 
+
+-->
+<!--<div [ngSwitch]="menu" >
+  <ion-list *ngSwitchCase="'All'">-->
+<div *ngIf="myOrders.length>0 ; else other_content">
+  
+<p>Here is your order status. You can go to the counter and collect your order when the status changes to "Collected"</p> 
+<div class="container1">
+
+	<div class="table">
+		<div class="table-header">
+        <div class="header__item">Order ID</div>
+			<div class="header__item">Item</div>
+			<div class="header__item">Quantity</div>
+			<div class="header__item">Status</div>
+		</div>
+		<div class="table-content" *ngFor="let x of myOrders">
+			<div class="table-row"  *ngFor="let y of x.order.split(','); let i=index">	
+          {{splitQuan(x.quantity)}}	
+          <div class="table-data">{{x.id}}</div>
+				<div class="table-data">{{y}}</div>
+				<div class="table-data">{{itemQuantity[i]}}</div>
+				<div class="table-data">{{x.status}}</div>
+		
+			</div>
+			
+		</div>	
+	</div>
+</div>
+</div>
+<ng-template #other_content>
+<p>No Orders</p>
+</ng-template>
+<!--
+</ion-list></div>
+
+<div [ngSwitch]="menu" >
+  <ion-list *ngSwitchCase="'Dosa'">
+
+    <div *ngIf="myOrders.length>0 ; else other_content">
+  
+      <p>Here is your order status. You can go to the counter and collect your order when the status changes to "Collected"</p> 
+      <div class="container1">
+      
+        <div class="table">
+          <div class="table-header">
+              <div class="header__item">Order ID</div>
+            <div class="header__item">Item</div>
+            <div class="header__item">Quantity</div>
+            <div class="header__item">Status</div>
+          </div>
+          <div class="table-content" *ngFor="let x of myOrders">
+            <div class="table-row"  *ngFor="let y of x.order.split(','); let i=index">	
+                {{splitQuan(x.quantity)}}	
+                <div class="table-data">{{x.id}}</div>
+              <div class="table-data">{{y}}</div>
+              <div class="table-data">{{itemQuantity[i]}}</div>
+              <div class="table-data">{{x.status}}</div>
+          
+            </div>
+            
+          </div>	
+        </div>
+      </div>
+      </div>
+      <ng-template #other_content>
+      <p>No Orders</p>
+      </ng-template>
+      
+</ion-list></div>
+
+
+<div [ngSwitch]="menu" >
+  <ion-list *ngSwitchCase="'Chinese'">
+
+    <div *ngIf="myOrders.length>0 ; else other_content">
+  
+      <p>Here is your order status. You can go to the counter and collect your order when the status changes to "Collected"</p> 
+      <div class="container1">
+      
+        <div class="table">
+          <div class="table-header">
+              <div class="header__item">Order ID</div>
+            <div class="header__item">Item</div>
+            <div class="header__item">Quantity</div>
+            <div class="header__item">Status</div>
+          </div>
+          <div class="table-content" *ngFor="let x of myOrders">
+            <div class="table-row"  *ngFor="let y of x.order.split(','); let i=index">	
+                {{splitQuan(x.quantity)}}	
+                <div class="table-data">{{x.id}}</div>
+              <div class="table-data">{{y}}</div>
+              <div class="table-data">{{itemQuantity[i]}}</div>
+              <div class="table-data">{{x.status}}</div>
+          
+            </div>
+            
+          </div>	
+        </div>
+      </div>
+      </div>
+      <ng-template #other_content>
+      <p>No Orders</p>
+      </ng-template>
+      
+    
+</ion-list></div>
+-->
+</ion-content>
+<!--</ion-content>-->

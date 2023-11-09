@@ -1,0 +1,196 @@
+page-contact {
+
+}
+
+ion-navbar
+{
+	height: 10px;
+}
+
+h3{
+  color: black;
+}
+.card-background-page {
+background: black;
+
+
+  ion-card {
+    position: relative;
+    text-align: center;
+    font-size: 10px;
+    margin: 0px;
+    padding: 0%;
+  
+    
+    font-family: 'Lato';
+    
+  }
+
+  .card-title {
+    position: absolute;
+    top: 70%;    
+    width: 100%;
+    font-weight: bold; 
+    color: #fff;
+    opacity:1.0;
+  }
+
+
+  .card-subtitle {
+    font-size: 1.0em;
+    position: absolute;
+    top: 88%;
+    width: 100%;
+    color: #fff;
+  }
+
+.card-title #chi
+{
+  color: black;
+}
+
+img{
+  backdrop-filter: blur(2px);
+}
+.content
+{
+  float: left;
+  color: grey;
+  font-size: 1.1rem;
+  justify-content: left;
+  text-align: left;
+}
+
+
+
+ion-item, ion-list-header
+{
+  color: white;
+  background: black;
+  position: relative;
+    text-align: left;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+    font-family: 'Lato';
+    border-radius: 10px;
+    }
+}
+
+ 
+  
+
+
+  $base-spacing-unit: 10px;
+$half-spacing-unit: $base-spacing-unit / 2;
+
+$color-alpha: #1772FF;
+$color-form-highlight: #EEEEEE;
+
+*, *:before, *:after {
+	box-sizing:border-box;
+}
+
+
+
+h1,h2,h3,h4,h5,h6 {
+	margin:0;
+}
+
+.container2 {
+  max-width: 95%;
+  margin-bottom:0px;
+	margin-right:auto;
+	margin-left:auto;
+	//display:flex;
+justify-content:center;
+	align-items:center;
+//	min-height:100vh;
+}
+
+.table1 {
+	width:100%;
+  //border:1px solid #488aff;
+  
+  
+}
+
+.table-header1 {
+	display:flex;
+	width:100%;
+  background:#000;
+  color: white;
+  padding:($half-spacing-unit * 1.5) 0;
+  font-family: 'Raleway';
+  //border-top: 1px solid #488aff;
+}
+
+.table-row1 {
+	display:flex;
+	width:100%;
+	padding:($half-spacing-unit * 1.5) 0;
+  font-family: 'Lato';
+  color: white;
+  float: left;
+	
+}
+
+.table-data1, .header__item1 {
+	//flex: 1 1 20%;
+  text-align:left;
+  //max-width: 30%;
+	//max-height: 40%;
+	margin:5px;
+}
+
+.header__item1 {
+  text-transform:uppercase;
+  font-size: 15px;
+  background: #488aff;
+  padding-right: 5%;
+}
+#rate{
+ transform: scale(5);
+}
+
+.disabled {
+  pointer-events:none; //This makes it not clickable
+  opacity:0.3;        //This grays it out to look disabled
+}
+
+.menuImg
+{
+width: 15%;
+text-align: center;
+}
+.menuDet
+{
+  width: 60%;
+}
+.menuAdd
+{
+  width: 25%;
+  text-align: center;
+  font-size: 2.0rem;
+  
+  
+}
+ion-icon 
+{
+  font-size: 2.0rem;
+  padding: 5%;
+  
+}
+.cust 
+{
+  color: #488aff;
+}
+
+//badge
+// .badge {
+//   font-size: 0.8rem;
+//   background: #488aff;
+//   margin-left: 1%;
+  
+  
+// }
