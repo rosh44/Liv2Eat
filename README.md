@@ -19,11 +19,11 @@ Liv2Eat is a digital solution designed to modernize the canteen experience by st
 
 ## Screenshots
 
+### Login & Home
+<img src="screens/Login_and_home.png" width="400">
+
 ### Order Flow
 <img src="screens/Order_flow.png" width="400">
-
-### Login & Home
-<img src="screens/Login_&_home.png" width="400">
 
 ### Admin Web App Screen
 <img src="screens/Admin_Web_App_Screen.png" width="400">
